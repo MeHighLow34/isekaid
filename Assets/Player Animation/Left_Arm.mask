@@ -1,0 +1,176 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Left_Arm
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: 2_hand
+    m_Weight: 0
+  - m_Path: 2_hand.001
+    m_Weight: 0
+  - m_Path: ArmRig.001
+    m_Weight: 0
+  - m_Path: ArmRig.001/Bone
+    m_Weight: 1
+  - m_Path: ArmRig.001/Bone/Bone_end
+    m_Weight: 1
+  - m_Path: ArmRig.001/deltoid.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/deltoid.R/upper_arm.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/deltoid.R/upper_arm.R/forearm.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/deltoid.R/upper_arm.R/forearm.R/forearm.R_end
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_index.01.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_index.01.R/f_index.02.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_index.01.R/f_index.02.R/f_index.03.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end/f_index.03.R_end_end
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_middle.01.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_middle.01.R/f_middle.02.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end/f_middle.03.R_end_end
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_pinky.01.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_pinky.01.R/f_pinky.02.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end/f_pinky.03.R_end_end
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_ring.01.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_ring.01.R/f_ring.02.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end/f_ring.03.R_end_end
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/thumb.01.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/thumb.01.R/thumb.02.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/thumb.01.R/thumb.02.R/thumb.03.R
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+    m_Weight: 1
+  - m_Path: ArmRig.001/forearm.R.001/hand.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end/thumb.03.R_end_end
+    m_Weight: 1
+  - m_Path: ArmRig.001/upper_arm.R.001
+    m_Weight: 1
+  - m_Path: ArmRig.001/upper_arm.R.001/upper_arm.R.001_end
+    m_Weight: 1
+  - m_Path: ArmRig.002
+    m_Weight: 1
+  - m_Path: ArmRig.002/Bone 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/Bone 1/Bone_end 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/deltoid.R 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/deltoid.R 1/upper_arm.R 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/deltoid.R 1/upper_arm.R 1/forearm.R 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/deltoid.R 1/upper_arm.R 1/forearm.R 1/forearm.R_end 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_index.01.R 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_index.01.R 1/f_index.02.R 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_index.01.R 1/f_index.02.R 1/f_index.03.R
+      1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_index.01.R 1/f_index.02.R 1/f_index.03.R
+      1/f_index.03.R_end 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_index.01.R 1/f_index.02.R 1/f_index.03.R
+      1/f_index.03.R_end 1/f_index.03.R_end_end 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_middle.01.R 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_middle.01.R 1/f_middle.02.R 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_middle.01.R 1/f_middle.02.R 1/f_middle.03.R
+      1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_middle.01.R 1/f_middle.02.R 1/f_middle.03.R
+      1/f_middle.03.R_end 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_middle.01.R 1/f_middle.02.R 1/f_middle.03.R
+      1/f_middle.03.R_end 1/f_middle.03.R_end_end 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_pinky.01.R 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_pinky.01.R 1/f_pinky.02.R 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_pinky.01.R 1/f_pinky.02.R 1/f_pinky.03.R
+      1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_pinky.01.R 1/f_pinky.02.R 1/f_pinky.03.R
+      1/f_pinky.03.R_end 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_pinky.01.R 1/f_pinky.02.R 1/f_pinky.03.R
+      1/f_pinky.03.R_end 1/f_pinky.03.R_end_end 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_ring.01.R 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_ring.01.R 1/f_ring.02.R 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_ring.01.R 1/f_ring.02.R 1/f_ring.03.R
+      1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_ring.01.R 1/f_ring.02.R 1/f_ring.03.R
+      1/f_ring.03.R_end 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/f_ring.01.R 1/f_ring.02.R 1/f_ring.03.R
+      1/f_ring.03.R_end 1/f_ring.03.R_end_end 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/thumb.01.R 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/thumb.01.R 1/thumb.02.R 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/thumb.01.R 1/thumb.02.R 1/thumb.03.R
+      1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/thumb.01.R 1/thumb.02.R 1/thumb.03.R
+      1/thumb.03.R_end 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/forearm.R.001 1/hand.R 1/thumb.01.R 1/thumb.02.R 1/thumb.03.R
+      1/thumb.03.R_end 1/thumb.03.R_end_end 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/upper_arm.R.001 1
+    m_Weight: 1
+  - m_Path: ArmRig.002/upper_arm.R.001 1/upper_arm.R.001_end 1
+    m_Weight: 1

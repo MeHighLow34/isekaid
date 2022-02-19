@@ -1,0 +1,83 @@
+What's New to RealToon V5.0.8p3 (Patch#3) (October 2021)
+=====================================
+[New]
+- Main Color Power (URP and HDRP)
+  * This will let you adjust the intensity of the Main Color.
+  * You don't need to adjust the Main Color to darker color or gray color to prevent overexposure, just adjust this new option.
+
+- Compute Deformation [DOTS - Hybrid Renderer] (Currently URP 10, 12 and later)
+
+- Light Ignore Y Normal Direction (Self Shadow) (URP and HDRP)
+  * Light will ignore object's Y normal direction when the angle or position of the light is in X or Z.
+  * Self Shadow/Shade will move in X or Z only.
+
+[Fix]
+- Transparent mode "Affect Shadow" does not work properly.
+- Include "Sobel Outline Effect" again, this was missing or not included in packing the shader. (Built-In) (Unity 2019 to Later)
+
+[Change]
+- "Use Vertex Color As Normal" has been removed. (URP and HDRP)
+- "Main Color" default color has been changed to white because of the new option "Main Color Power". (URP and HDRP)
+
+[Improved]
+- "Shadow Color" and "Shadow Color Texture" has been improved, the colors are now accurate and you'll get what you select. (When Light Affect Shadow is disabled) (HDRP)
+
+
+
+Note/Warning (If you are already a RealToon (URP or HDRP) user and planned to update your project to this patch):
+  *There is a new option for "Main Color" to adjust the intensity and it is set to low value to prevent overexposure,
+  if you still want to use the previous "Main Color" intesnity, just set the "Main Color Power" to 1.
+
+  *"Shadow Color" and "Shadow Color Texture" has been improved on RealToon HDRP, you might need to re-adjust the shadow color or the "Overall Shadow Color Power"
+
+
+
+
+What's New to RealToon V5.0.8 Update (March 2020)(Main Update)
+=====================================
+
+[New Options]
+
+- Use Vertex Color As Normal Direction (Outline) [URP and HDRP]
+*Use the vertex colors of the object as normal direction for outline.
+
+- Affect Shadow (Transparency) [URP]
+*Transparency affects shadow.
+
+- PTexture Color (PTexture) [URP]
+*Can now color the PTexture feature.
+
+- Optimize for [Light Mode:Baked] (Lightmapping) [URP]
+*Optimize the shader for [Light Mode: Baked]
+
+- On shader "Screen Space Outline" (Outline) [URP and HDRP]
+*Screen space - depth based outline on the shader.
+
+- Blending (Transparency) [URP and HDRP]
+- Rim Light Intensity (RimLight) [URP]
+
+- Refresh Settings (URP)
+*This will refresh the settings and apply it properly.
+*Useful if the settings are not applied properly or after change shader or if there is a problem on the shader.
+
+
+[New Features and Support]
+
+- DeNorSob Outline (Post - Processing Effect) [URP and HDRP]
+*Sobel, Depth and Normal based outline.
+
+- Smooth Object Normal - Helper Script (Smooth Object Normal) [URP and HDRP]
+*This helper script will help "Smooth Object Normal" feature to follow object animation or movement.
+
+- Lightmap Support [URP]
+- PlayStation Support [URP and HDRP]
+- URP 11 Support
+- HDRP 11 Support
+- Unity DOTS Ready [URP and HDRP]
+=====================================
+
+#Read the "Change - Fix Log.txt." file for previous updates.
+#This update supports Unity 5, 2017, 2018, 2019, 2020, 2021 and future unity versions.
+
+[Other Notes]
+* If you encounter some problems or need help just contact by email.

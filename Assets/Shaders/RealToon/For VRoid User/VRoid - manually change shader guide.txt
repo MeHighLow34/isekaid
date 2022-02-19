@@ -1,0 +1,113 @@
+A guide on how to manually change and setup VRoid model material shader.
+===============================================================
+
+*For first step select all your VRoid model materials and change its shader to RealToon shader.
+
+===============================================================
+
+*If you are a Unity Built-In/3D older renderer user:
+- For Transparent materials, change the shader to "RealToon > Default > Fade Transparancy"
+- For materials that its main/base texture uses Alpha Channel, change the shader to "RealToon > Default > Default"
+  then enable "Cutout" under the "Enable/Disable Features" section, then enable "Alpha Based Cutout" under the "Cutout" section then adjust the "Cutout" slider.
+- For Opaque materials, change the shader to  "RealToon > Default > Default".
+
+
+
+*if you are a Unity SRP (URP and HDRP) user:
+- For Transparent materials, change the shader to "Universal Render Pipeline/HDRP > RealToon > Default" then enable "Transparent Mode"
+- For materials that its main/base texture uses Alpha Channel, change the shader to "Universal Render Pipeline/HDRP > RealToon > Default" then enable "Transparent Mode"
+  then enable "Cutout" under the "Enable/Disable Features" section, then enable "Alpha Based Cutout" under the "Cutout" section then adjust the "Cutout" slider.
+- For Opaque materials, change the shader to "Universal Render Pipeline/HDRP > RealToon > Default".
+
+
+
+===============================================================
+Materials
+===============================================================
+
+*Materials that its main/base texture uses Alpha Channel:
+(Use "Cutout" Feature for these material)
+- F00_000_00_EyeExtra_01_EYE
+- F00_000_00_EyeHighlight_00_EYE
+- F00_000_00_FaceBrow_00_FACE
+- F00_000_00_FaceEyelash_00_FACE
+- F00_000_00_FaceEyeline_00_FACE
+- F00_000_HairBack_00_HAIR
+
+
+*Materials that are Opaque:
+- F00_000_00_EyeWhite_00_EYE
+- F00_000_00_Face_00_SKIN
+- F00_000_00_FaceMouth_00_FACE
+- F00_001_01_Accessory_Tie_01_CLOTH (Uses Cutout Feature)
+- F00_001_01_Body_00_SKIN (Uses Cutout Feature)
+- F00_001_01_Bottoms_01_CLOTH (Uses Cutout Feature)
+- F00_001_01_Shoes_01_CLOTH (Uses Cutout Feature)
+- F00_001_01_Tops_01_CLOTH (Uses Cutout Feature)
+- F00_000_Hair_00_HAIR_01 (Uses Cutout Feature)
+- F00_000_Hair_00_HAIR_02 (Uses Cutout Feature)
+- F00_000_00_EyeIris_00_EYE (Uses Cutout Feature)
+
+
+*Materials that uses Normal Map:
+- F00_000_Hair_00_HAIR_01 (Texture: F00_000_Hair_00_nml.png )
+- F00_000_Hair_00_HAIR_02 (Texture: F00_000_Hair_00_nml.png )
+- F00_000_HairBack_00_HAIR (Texture: F00_000_HairBack_00_nml.png )
+- F00_001_01_Body_00_SKIN (Texture: F00_001_01_Body_00_nml.png )
+
+
+*Materials that uses Cutout:
+- F00_001_01_Accessory_Tie_01_CLOTH
+- F00_001_01_Body_00_SKIN
+- F00_001_01_Bottoms_01_CLOTH
+- F00_001_01_Shoes_01_CLOTH
+- F00_001_01_Tops_01_CLOTH
+- F00_000_Hair_00_HAIR_01
+- F00_000_Hair_00_HAIR_02
+- F00_000_00_EyeIris_00_EYE
+
+
+
+===============================================================
+How To's
+===============================================================
+
+*How to have gloss hair:
+1.Select this materials
+	- F00_000_HairBack_00_HAIR
+	- F00_000_Hair_00_HAIR_01
+2.Enable "Gloss" and Gloss Texture" under the "Enable/Disable Features" section.
+3.Go to "Gloss" section then "Gloss Texture".
+4.Put the "F00_000_Hair_00_spe.png" to the texture slot "Gloss Texture".
+
+
+*How to set a material that uses Normal Map:
+1. Select the material that uses Normal Map.
+2. Enable "Normal Map" under the "Enable/Disable Features".
+3 Go to "Normal Map" section then assign the NormalMap image file to the "Normal Map" texture slot.
+*See the "Materials that uses Normal Map" above to know the image files.
+
+
+*To change the shadow color:
+1. Go to "Shadow" section.
+2. Change the "Overall Shadow Color" to the color you want.
+
+
+*How to have emission or glow:
+1. Enable "Selflit" under the "Enable/Disable Features" section.
+2. Go to "Selflit" section then change "Intensity" to 1.
+3. Adjust the "Power" if you want it bright or not.
+
+
+
+===============================================================
+Note
+===============================================================
+
+- If you don't want a material to cast shadow, just enable "Disable Cast Shadow".
+- If you want an object back side visible, just change the Culling to "Off" (URP - HDRP), just change the Double Sided to "On" (Built-In)
+- If you don't want a light and shadow visible at the back side of an object like plane object, just enable "No Light and Shadow On BackFace".
+- If you want the light to affect the shadow especially colored shadow, just enable "Light Affect Shadow" under the "Lighting" section.
+- If you don't want your models material to receive Ambient Light/GI Lighting/Sky light, just disable "Receive Environmental Lighting and GI" under the "Lighting" section.
+- If you want your models material to have smooth shading, just adjust the "Hardness" under "Self Shadow" section, adjust also the "Threshold" if needed.
+- Changing the "Overall Shadow Color" can also simulate SSS/Subsurface Scattering.

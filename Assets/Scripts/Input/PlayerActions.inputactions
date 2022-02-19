@@ -1,0 +1,52 @@
+{
+    "name": "PlayerActions",
+    "maps": [
+        {
+            "name": "Action",
+            "id": "6f114914-f631-42cd-a1b6-80dac590f02f",
+            "actions": [
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "d6476129-71a6-477b-bd4d-a8108d81ec21",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "AbilityAttack",
+                    "type": "Button",
+                    "id": "64715c6c-c480-4522-b9c0-43fa6685d50e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4cc1aa71-f361-47db-92a7-d74a89a79762",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "590e3ef0-8d4a-49af-ac2c-03a5cd192f3c",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AbilityAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

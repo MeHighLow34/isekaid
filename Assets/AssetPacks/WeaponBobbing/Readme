@@ -1,0 +1,69 @@
+Thanks for buying Weapon Bobbing Script Pack.
+
+This asset includes these bobbing scripts:
+- CS:GO Style Bobbing (WeaponBobCSGO)
+- CSS Style Bobbing (WeaponBobCSS)
+- Payday 2 Style Bobbing (WeaponBobPD2)
+- Modernator Style Bobbing 1 (WeaponBobModernator1)
+- Modernator Style Bobbing 2 (WeaponBobModernator2)
+
+Bobbing scripts makes your weapon moves more realistic and much better looking without it.
+
+You don't have to make seperated walking or running animation with this.
+
+To make something look like running, just change the parameters of each bobbing script.
+
+Note that I added FPSController from Unity Standard Assets for demonstration.
+
+If you already have FPSController, or using alternative assets(or own implementation), you can remove it after watch demo.
+
+(Unless if you are care about unusing resources or save more disk spaces in your computer. But assets not used in your game will automatically removed from build game, Unity will do it for you.)
+
+To use bobbing script, just drag one of the bobbing script to your weapon object.
+
+Or, you can add by clicking Add Component button in inspector >> Scripts >> WeaponBobbing.
+
+To see how it's working, check the Demo scene in asset folder.
+
+Select and open "FPSController" object and find "FirstPersonCharacter >> Pistol" object.
+
+You can see that 5 different bobbing scripts added as component already, and by default, CSS(Counter Strike Source) style is turned on.
+
+You must not use 2 or more bobbing script at the same time, each script must be work alone, otherwise result quite be mess.
+
+Demo is just demonstration, so I put all of bobbing scripts to weapon.
+
+To use this in your game, just put one of them you like.
+
+To see how other bobbing scripts work, just turn off the previous activated bobbing script and turn on which one you want to look.
+
+One thing you have to becareful is that if you have a script that manipulate the position and rotation of gun, some of Bobbing script won't work properly, because those scripts also affects on bobbing scripts too.
+
+This could be happen if you have a script something like iron-sight or weapon swaying.
+
+To fix this, you have to change the code of both scripts, mix them or rid off duplication of transform updates.
+
+There is a parameter Bob Multiplier that change the speed of bobbing animation.
+
+Increasing this value will makes bobbing scripts affects more, but the animation could be little bit a faster, so you have to adjust other parameters to get your desired result.
+
+Also this is not clear solution, so becareful to use these bobbing scripts with other scripts.
+
+(This is actually could be faced oftenly when using external script asset, you have to get use to it)
+
+Note that you can use Bob Multipler parameter to make bobbing faster for something like running.
+
+Some of bobbing scripts need an additional components named "LocalRotator" which also located WeaponBobbing namespace to work properly:
+
+1. Payday 2 Style Bobbing
+To use Payday 2 Style bobbing, you have to put "LocalRotator" script into your bone and assign it to WeaponBobPD2 script with metarig transform.
+LocalRotator have Local Axis parameter, it's Vector3 value and must be set to [0, 1, 0].
+Check the Demo Scene and look at the LocalRotator component in FPSController > FirstPersonCharacter >> Pistol >> metarig.
+
+2. Modernator Style Bobbing 1
+To use Modernator Style Bobbing 1, you have to put "LocalRotator" script into your bone and assign it to WeaponBobModernator1 script with metarig transform.
+LocalRotator have Local Axis parameter, it's Vector3 value and must be set to [0, 0, 10].
+Check the Demo Scene and look at the LocalRotator component in FPSController > FirstPersonCharacter >> Pistol >> metarig.
+
+
+If you have any question, feel free to ask me: rico345100@gmail.com
