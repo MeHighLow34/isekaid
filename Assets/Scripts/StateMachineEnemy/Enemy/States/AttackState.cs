@@ -16,8 +16,6 @@ namespace Isekai
             enemyManager.attackRange = enemyManager.attack1.distanceRequirement;
             enemyManager.recoveryTime = enemyManager.attack1.recoveryTime;
             enemyManager.maxRecoveryTime = enemyManager.attack1.recoveryTime;
-            enemyAnimationHandler.enemyAnimator.applyRootMotion = false;
-            enemyAnimationHandler.enemyAnimator.updateMode = AnimatorUpdateMode.Normal;
             if (played == false)
             {
                 enemyAnimationHandler.PlayTargetAnimation(enemyManager.attack1.animationName, true);
@@ -30,28 +28,9 @@ namespace Isekai
             }
 
             return this;
-            //float distance = Vector3.Distance(enemyManager.transform.position, enemyManager.currentTarget.transform.position);
-            //if(distance <= enemyManager.escapeRange)
-            //{
-            //    InvokeRepeating("MoveALittle(enemyManager)", 0.05f, 5f);
-            //    enemyManager.transform.LookAt(enemyManager.currentTarget.transform.position);
-            //    enemyManager.enemyAnimationHandler.enemyAnimator.SetBool("Shooting", true);
-            //    return this;
-            //}
-            //else
-            //{
-            //    enemyManager.enemyAnimationHandler.enemyAnimator.SetBool("Shooting", false);
-            //    enemyManager.navMeshAgent.enabled = true;
-
-
-            //    return pursueTargetState;
-            //}
-
-
-
-
         }
 
+        #region Commented Code
         //    //private void MoveALittle(EnemyManager enemyManager)
         //    //{
         //    //    Vector3 newPosition = new Vector3(Random.Range(-range, range), 0f, Random.Range(-range, range));
@@ -169,3 +148,23 @@ namespace Isekai
         //}
     }
 }
+
+
+//float distance = Vector3.Distance(enemyManager.transform.position, enemyManager.currentTarget.transform.position);
+//if(distance <= enemyManager.escapeRange)
+//{
+//    InvokeRepeating("MoveALittle(enemyManager)", 0.05f, 5f);
+//    enemyManager.transform.LookAt(enemyManager.currentTarget.transform.position);
+//    enemyManager.enemyAnimationHandler.enemyAnimator.SetBool("Shooting", true);
+//    return this;
+//}
+//else
+//{
+//    enemyManager.enemyAnimationHandler.enemyAnimator.SetBool("Shooting", false);
+//    enemyManager.navMeshAgent.enabled = true;
+
+
+//    return pursueTargetState;
+//}
+
+#endregion

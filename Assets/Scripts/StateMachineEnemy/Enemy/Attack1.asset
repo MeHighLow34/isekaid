@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationName: Attack1
   canDoCombo: 1
-  recoveryTime: 3
-  distanceRequirement: 1.5
+  recoveryTime: 2
+  distanceRequirement: 2.5
