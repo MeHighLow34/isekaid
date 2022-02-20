@@ -36,18 +36,14 @@ namespace Isekai
         public LayerMask detectionLayer;
         public float escapeRange;
         public float tooCloseRange;
+        public float distance;
         [Header("Bools")]
         public bool isInteracting;
         public bool isRecovering;
         public bool suckedByBlackHole = false;
         public bool isDead;
-        [Header("Shooting")]
-        public Transform attackPosition;
-        public Projectile bullet;
-        public float shootingForce;
         public bool strafeLeft;
         public bool strafeRight;
-        public Transform hands;
         private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
@@ -61,9 +57,8 @@ namespace Isekai
         private void  FixedUpdate()
         {
             RootAnimationChecker();
-            HandleStateMachine();   // State Machine
+            HandleStateMachine(); 
         }
-
         private void LateUpdate()
         {
             AnimatorBoolsEquator();
@@ -82,7 +77,6 @@ namespace Isekai
         }
         private void RootAnimationChecker()
         {
-            isInteracting = enemyAnimationHandler.enemyAnimator.GetBool("isInteracting");
             if (isInteracting)  // Apply Root Motion
             {
                 enemyAnimationHandler.enemyAnimator.applyRootMotion = true;
@@ -118,27 +112,14 @@ namespace Isekai
             }
             else
             {
-                enemyAnimationHandler.enemyAnimator.SetFloat("Speed", enemyRb.velocity.magnitude); // Setting the animationFloat to the speed of our movement...
+                enemyAnimationHandler.enemyAnimator.SetFloat("Speed", enemyRb.velocity.magnitude); // Setting the animationFloat to the speed of our movement for cleaner animation.
             }
         }
-
-
-
-        public void FaceTarget()
-        {
-            Vector3 direction = currentTarget.transform.position - transform.position;
-            direction.y = transform.position.y;
-            Quaternion lookRotation = Quaternion.LookRotation(direction).normalized;
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, rotationDelay * Time.deltaTime);
-
-        }
-
         private void AnimatorBoolsEquator()
         {
+            isInteracting = enemyAnimationHandler.enemyAnimator.GetBool("isInteracting");
             isRecovering = enemyAnimationHandler.enemyAnimator.GetBool("isRecovering");
         }
-
-
         #region Animation Event
 
         public void TurnOnRecovery()
@@ -157,15 +138,27 @@ namespace Isekai
                 GetComponent<Ragdoll>().state = true; // If we die we turn on ragDoll
             }
         }
-        public void Shoot()
+        #endregion
+        public void FaceTarget()
         {
-          attackPosition.LookAt(currentTarget.transform.position);
-          var newBullet =  Instantiate(bullet, attackPosition.transform.position, Quaternion.identity);
-          newBullet.GetComponent<Rigidbody>().AddForce(attackPosition.transform.forward * shootingForce, ForceMode.Impulse);
-
+            Vector3 direction = currentTarget.transform.position - transform.position;
+            direction.y = transform.position.y;
+            Quaternion lookRotation = Quaternion.LookRotation(direction).normalized;
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, rotationDelay * Time.deltaTime);
+        }
+        public float DistanceToEnemy()
+        {
+            distance = Vector3.Distance(transform.position, currentTarget.transform.position);
+            return distance;
         }
 
+        #region Gizmos
 
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawWireSphere(transform.position, detectionRadius);
+        }
 
         #endregion
     }

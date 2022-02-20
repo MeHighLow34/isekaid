@@ -11,7 +11,7 @@ namespace Isekai
         [SerializeField] PatrolPath patrolPath;
         public int currentWaypointIndex = 0;
         Vector3 nextPosition;
-        public float atWayPointTimer = 100;
+        public float atWayPointTimer = 0;
 
         public override State Tick(EnemyManager enemyManager, BaseStats enemyStats, EnemyAnimationHandler enemyAnimationHandler)
         {
@@ -58,6 +58,7 @@ namespace Isekai
                 }
             }
         }
+
         private bool AtWayPoint(EnemyManager enemyManager)
         {
             float distanceToWaypoint = Vector3.Distance(transform.position, GetCurrentWaypoint());

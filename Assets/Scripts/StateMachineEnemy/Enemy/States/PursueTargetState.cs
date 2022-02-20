@@ -12,22 +12,16 @@ namespace Isekai
         public override State Tick(EnemyManager enemyManager, BaseStats enemyStats, EnemyAnimationHandler enemyAnimationHandler)
         {
             enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", false);
-            enemyManager.navMeshAgent.enabled = true;
             enemyManager.navMeshAgent.speed = 5.6f;
-            float distance = Vector3.Distance(enemyManager.transform.position, enemyManager.currentTarget.transform.position);
             enemyManager.navMeshAgent.SetDestination(enemyManager.currentTarget.transform.position);
-            if (distance <= enemyManager.combatStanceStateRange && HasLineOfSight(enemyManager))
+            if (enemyManager.DistanceToEnemy() <= enemyManager.combatStanceStateRange && HasLineOfSight(enemyManager))
             {
                 return combatStanceState;
             }
             else
             {
-
                 return this;
             }
-
-            
-           
         }
         public bool HasLineOfSight(EnemyManager enemyManager)
         {
