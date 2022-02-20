@@ -11,6 +11,7 @@ namespace Isekai
         bool played = false;
         public override State Tick(EnemyManager enemyManager, BaseStats enemyStats, EnemyAnimationHandler enemyAnimationHandler)
         {
+            enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", true);
             enemyManager.FaceTarget();
             enemyManager.attackRange = enemyManager.attack1.distanceRequirement;
             enemyManager.recoveryTime = enemyManager.attack1.recoveryTime;

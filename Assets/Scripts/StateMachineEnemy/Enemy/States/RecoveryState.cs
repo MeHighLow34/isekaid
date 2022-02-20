@@ -11,15 +11,13 @@ namespace Isekai
         public CombatStanceState combatStanceState;
         public override State Tick(EnemyManager enemyManager, BaseStats enemyStats, EnemyAnimationHandler enemyAnimationHandler)
         {
-           
-            enemyAnimationHandler.enemyAnimator.applyRootMotion = true;
+            enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", true);
             enemyManager.FaceTarget();
             enemyManager.recoveryTime -= Time.deltaTime;
             if (enemyManager.recoveryTime <= 0)
             {
                 enemyAnimationHandler.enemyAnimator.SetBool("isRecovering", false);
                 enemyManager.recoveryTime = enemyManager.maxRecoveryTime;
-                enemyAnimationHandler.enemyAnimator.SetBool("isRecovering", false);
                 return combatStanceState;
             }
 

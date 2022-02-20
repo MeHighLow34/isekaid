@@ -20,21 +20,21 @@ namespace Isekai
 
                 #endregion
                 #region NavMesh
-            enemyManager.navMeshAgent.speed = 2.4f;
+                enemyManager.navMeshAgent.speed = 2.4f;
                 enemyManager.navMeshAgent.SetDestination(enemyManager.currentTarget.transform.position);
             #endregion
 
-                #region ChargeState 
-                cTimer += Time.deltaTime;
-                if (cTimer > enemyManager.chargeTimer)
-                {
-                  cTimer = 0;
-                  enemyAnimationHandler.enemyAnimator.SetBool("isCharging", true);
-                  return chargeState;
-                }
+            #region ChargeState 
+            cTimer += Time.deltaTime;
+            if (cTimer > enemyManager.chargeTimer)
+            {
+                cTimer = 0;
+                enemyAnimationHandler.enemyAnimator.SetBool("isCharging", true);
+                return chargeState;
+            }
             #endregion
-                #region AttackState
-             if (enemyManager.DistanceToEnemy() <= enemyManager.attackRange)
+            #region AttackState
+            if (enemyManager.DistanceToEnemy() <= enemyManager.attackRange)
                 {
                    cTimer = 0;
                    enemyAnimationHandler.enemyAnimator.SetBool("attack", true);
