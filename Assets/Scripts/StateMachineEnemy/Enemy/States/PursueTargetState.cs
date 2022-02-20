@@ -11,6 +11,7 @@ namespace Isekai
 
         public override State Tick(EnemyManager enemyManager, BaseStats enemyStats, EnemyAnimationHandler enemyAnimationHandler)
         {
+            enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", false);
             enemyManager.navMeshAgent.enabled = true;
             enemyManager.navMeshAgent.speed = 5.6f;
             float distance = Vector3.Distance(enemyManager.transform.position, enemyManager.currentTarget.transform.position);

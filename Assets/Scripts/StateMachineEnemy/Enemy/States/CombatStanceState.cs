@@ -13,6 +13,8 @@ namespace Isekai
         public float cTimer;
           public override State Tick(EnemyManager enemyManager,BaseStats enemyStats, EnemyAnimationHandler enemyAnimationHandler)
              {
+                enemyManager.navMeshAgent.enabled = false;
+                enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", true);
                 enemyAnimationHandler.enemyAnimator.SetBool("isRecovering", false);
                 cTimer += Time.deltaTime;
                 if(cTimer  > enemyManager.chargeTimer)
@@ -22,7 +24,6 @@ namespace Isekai
                    return chargeState;
                 }
                 enemyManager.FaceTarget();
-                enemyManager.navMeshAgent.enabled = false;
                 enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", true);
                 enemyAnimationHandler.enemyAnimator.applyRootMotion = true;
                 float distance = Vector3.Distance(enemyManager.transform.position, enemyManager.currentTarget.transform.position);

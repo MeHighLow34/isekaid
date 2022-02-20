@@ -47,7 +47,6 @@ namespace Isekai
         public float shootingForce;
         public bool strafeLeft;
         public bool strafeRight;
-
         public Transform hands;
         private void Awake()
         {
@@ -56,22 +55,17 @@ namespace Isekai
         }
         private void Update()
         {
-            CheckIfDead();  // If we die we turn on ragDoll
-                            // VelocityEquator();// So that the locomotion animations actually play
-                            //   UpdateLocomotionAnimation();
+            CheckIfDead();
             VelocityEquator();
-
         }
         private void  FixedUpdate()
         {
-          //  VelocityEquator();
-            RootMotionSetup(); //necessary if we want to play rootMotion animation on the enemy
+            RootAnimationChecker();
             HandleStateMachine();   // State Machine
         }
 
         private void LateUpdate()
         {
-          //  VelocityEquator();
             AnimatorBoolsEquator();
             UpdateLocomotionAnimation();
         }
@@ -86,38 +80,24 @@ namespace Isekai
                 }
             }
         }
-
-        private void RootMotionSetup() //necessary if we want to play rootMotion animation on the enemy
-        {
-            
-            CheckIfRootMotionEnabled();
-            CheckIsInteracting();
-        }
-
-        #region Root Motion Animation Setup
-        private void CheckIfRootMotionEnabled()
-        {
-            if(enemyAnimationHandler.enemyAnimator.applyRootMotion == true)
-            {
-                GetComponent<Ragdoll>().disabled = true;
-                enemyAnimationHandler.enemyAnimator.updateMode = AnimatorUpdateMode.AnimatePhysics;
-            }
-            else
-            {
-                enemyAnimationHandler.enemyAnimator.updateMode = AnimatorUpdateMode.Normal;
-                GetComponent<Ragdoll>().disabled = false;
-            }
-            
-        }
-        private void CheckIsInteracting()
+        private void RootAnimationChecker()
         {
             isInteracting = enemyAnimationHandler.enemyAnimator.GetBool("isInteracting");
-            if(isInteracting)
+            if (isInteracting)  // Apply Root Motion
             {
-                navMeshAgent.enabled = false; // We don't want to  move when we are using Root Motion animation Obviously...
+                enemyAnimationHandler.enemyAnimator.applyRootMotion = true;
+                enemyAnimationHandler.enemyAnimator.updateMode = AnimatorUpdateMode.AnimatePhysics;
+                navMeshAgent.enabled = false;
+                GetComponent<Ragdoll>().disabled = true;
+            }
+            else  // Let the NavMeshAgent take over
+            {
+                enemyAnimationHandler.enemyAnimator.applyRootMotion = false;
+                enemyAnimationHandler.enemyAnimator.updateMode = AnimatorUpdateMode.Normal;
+                navMeshAgent.enabled = true;
+                GetComponent<Ragdoll>().disabled = false;   
             }
         }
-        #endregion
         private void SwitchToNextState(State nextState)
         {
             currentState = nextState;

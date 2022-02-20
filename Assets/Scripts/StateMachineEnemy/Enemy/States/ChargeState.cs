@@ -11,7 +11,7 @@ namespace Isekai
         public RecoveryState recoveryState;
         public override State Tick(EnemyManager enemyManager, BaseStats enemyStats, EnemyAnimationHandler enemyAnimationHandler)
         {
-
+            enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", true);
             enemyManager.FaceTarget();
             float distance = Vector3.Distance(enemyManager.transform.position, enemyManager.currentTarget.transform.position);
             if(distance <= enemyManager.attackRange)
