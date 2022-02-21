@@ -4813,7 +4813,7 @@ PrefabInstance:
       objectReference: {fileID: 279442190}
     - target: {fileID: 59401628530165060, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
       propertyPath: dwellTime
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 59401628530165060, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
       propertyPath: attackRange
