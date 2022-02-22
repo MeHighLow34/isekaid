@@ -9,6 +9,7 @@ TagManager:
   - FxTemporaire
   - Weapon
   - Enemy
+  - EnemyDamagePoint
   layers:
   - Default
   - TransparentFX

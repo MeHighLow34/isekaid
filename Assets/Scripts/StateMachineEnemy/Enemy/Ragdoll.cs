@@ -15,6 +15,7 @@ namespace Isekai
         [SerializeField] public Collider capsuleCollider;
         [SerializeField] public CapsuleCollider exceptionCollider;
         [SerializeField] public BoxCollider exceptCollider;
+        [SerializeField] public BoxCollider exception3DamageCollider;
         private Rigidbody[] ragdollBodies;
         private Collider[] ragdollColliders;
         public bool state = false;
@@ -39,6 +40,7 @@ namespace Isekai
                 TurnOffRagdoll();
                 exceptionCollider.enabled = true;
                 exceptCollider.enabled = true;
+                if(exception3DamageCollider != null) exception3DamageCollider.enabled = true;
             }
         }
       

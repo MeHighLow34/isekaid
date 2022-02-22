@@ -15,4 +15,4 @@ MonoBehaviour:
   animationName: Attack1
   canDoCombo: 1
   recoveryTime: 2
-  distanceRequirement: 2.5
+  distanceRequirement: 2.25

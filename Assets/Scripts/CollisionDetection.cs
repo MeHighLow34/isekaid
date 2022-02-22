@@ -16,17 +16,13 @@ namespace Isekai
             {
                 other.GetComponent<Rigidbody>().AddForce(other.transform.forward * force, ForceMode.Impulse); 
             }
-            if (other.gameObject.tag != "Enemy") return;
-            EnemyManager enemy = other.GetComponent<EnemyManager>();
-            if(enemy.currentState == attackState)
+            if (other.gameObject.tag == "EnemyDamagePoint")
             {
-              //  enemy.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
+                other.GetComponentInParent<EnemyHealth>().TakeDamage(damage);
+                var enemyAnimation = other.GetComponentInParent<EnemyAnimationHandler>();
+                enemyAnimation.PlayTargetAnimation("Hit", true);
             }
-            else
-            {
-                enemy.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
-                enemy.enemyAnimationHandler.PlayTargetAnimation("Hit", true);
-            }
+           
         }
     }
 }
