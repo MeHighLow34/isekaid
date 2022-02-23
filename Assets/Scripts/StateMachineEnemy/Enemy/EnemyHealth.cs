@@ -13,6 +13,7 @@ namespace Isekai
         Ragdoll ragdoll;
         EnemyManager manager;
         public GameObject canvas;
+        public GameObject hearth;
         private void Awake()
         {
 
@@ -46,6 +47,10 @@ namespace Isekai
             manager.isDead = true;
             manager.enabled = false;
             canvas.SetActive(false);
+            if(hearth != null)
+            {
+                hearth.SetActive(false);
+            }
         }
     }
 }

@@ -11,8 +11,9 @@ namespace Isekai
         {
             if(other.gameObject.tag == "Player")
             {
-               Health playerHealth = other.GetComponentInParent<Health>();
-                playerHealth.TakeDamage(10);
+                print(other.gameObject.name);
+                Health playerHealth = other.GetComponentInParent<Health>();
+                playerHealth.TakeDamage(3);
             }
         }
     }
