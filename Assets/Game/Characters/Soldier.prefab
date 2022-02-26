@@ -3129,7 +3129,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.071, y: 2.409}
+  m_AnchoredPosition: {x: 0.071, y: 2.046}
   m_SizeDelta: {x: 1550.4758, y: 729.6106}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6381470084595214512
@@ -3884,6 +3884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   canvas: {fileID: 6233207866505947234}
+  hearth: {fileID: 0}
 --- !u!195 &919132148955806599
 NavMeshAgent:
   m_ObjectHideFlags: 0
