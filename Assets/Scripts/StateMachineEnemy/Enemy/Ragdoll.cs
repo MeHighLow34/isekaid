@@ -18,6 +18,7 @@ namespace Isekai
         [SerializeField] public BoxCollider exception3DamageCollider;
         private Rigidbody[] ragdollBodies;
         private Collider[] ragdollColliders;
+        private CharacterJoint[] ragdollJoints;
         public bool state = false;
 
         public bool disabled;
@@ -25,6 +26,11 @@ namespace Isekai
         {
             ragdollBodies = ragdollHolder.GetComponentsInChildren<Rigidbody>();
             ragdollColliders = ragdollHolder.GetComponentsInChildren<Collider>();
+            ragdollJoints = ragdollHolder.GetComponentsInChildren<CharacterJoint>();
+            foreach (CharacterJoint characterJoint in ragdollJoints)
+            {
+                characterJoint.enableProjection = true;
+            }
         }
 
         private void FixedUpdate()
@@ -38,12 +44,20 @@ namespace Isekai
             else
             {
                 TurnOffRagdoll();
-                exceptionCollider.enabled = true;
-                exceptCollider.enabled = true;
-                if(exception3DamageCollider != null) exception3DamageCollider.enabled = true;
+                Exceptions();
             }
         }
-      
+        
+
+        private void Exceptions()
+        {
+            if (exceptCollider != null)
+            {
+                exceptionCollider.enabled = true;
+                exceptCollider.enabled = true;
+            }
+            if (exception3DamageCollider != null) exception3DamageCollider.enabled = true;
+        }
         
 
         public void TurnOnRagdoll()
