@@ -1,4 +1,4 @@
 public enum CharacterClass
 {
-    Player, Soldier
+    Player, Soldier, Archer
 }
