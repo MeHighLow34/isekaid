@@ -1,5 +1,94 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1540009256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1540009257}
+  - component: {fileID: 1540009258}
+  m_Layer: 19
+  m_Name: Pursue Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1540009257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540009256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1431506425394612620}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1540009258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540009256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d8f54fcd9ae974a848767de8e3ad37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  archerCombatStanceState: {fileID: 2050565026}
+  combatStanceState: {fileID: 0}
+--- !u!1 &2050565025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2050565027}
+  - component: {fileID: 2050565026}
+  m_Layer: 19
+  m_Name: Archer Combat Stance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2050565027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050565025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1431506425394612620}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2050565026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050565025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0f087ee5870574aaf2399eb1fa4650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  archerAttackState: {fileID: 0}
 --- !u!1 &92546744032529264
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +425,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1431506423614161653}
+  - component: {fileID: 562232713}
   m_Layer: 19
   m_Name: Patrol
   m_TagString: Untagged
@@ -357,6 +447,22 @@ Transform:
   m_Father: {fileID: 1431506425394612620}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &562232713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431506423614161658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde2660bbe5b80e408a30ee422146ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pursueTargetState: {fileID: 1540009258}
+  patrolPath: {fileID: 0}
+  currentWaypointIndex: 0
+  atWayPointTimer: 0
 --- !u!1 &1431506425394612621
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +491,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1431506423614161653}
+  - {fileID: 1540009257}
+  - {fileID: 2050565027}
   m_Father: {fileID: 1465643500013067126}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -623,6 +731,7 @@ GameObject:
   - component: {fileID: 1431506423713299605}
   - component: {fileID: 1431506423713299604}
   - component: {fileID: 1431506423713299607}
+  - component: {fileID: 919132148611907250}
   m_Layer: 19
   m_Name: Real Archer
   m_TagString: Enemy
@@ -687,7 +796,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2241897972257505740}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e4308df5fafc8d44b8dd01408dd0ef6d, type: 3}
+  m_Avatar: {fileID: 9000000, guid: eae42753ae4c76149a4afc787a2dc024, type: 3}
   m_Controller: {fileID: 9100000, guid: 3f513a0761f251d428c1701726381448, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -709,7 +818,7 @@ NavMeshAgent:
   m_Radius: 0.5
   m_Speed: 5.66
   m_Acceleration: 8
-  avoidancePriority: 50
+  avoidancePriority: 1
   m_AngularSpeed: 2400
   m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
@@ -784,6 +893,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAnimator: {fileID: 1431506423713299615}
+--- !u!114 &919132148611907250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241897972257505740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f5f8d8e089ea7f4cb6a747ba96387f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: {fileID: 562232713}
+  enemyAnimationHandler: {fileID: 1431506423713299607}
+  enemyRb: {fileID: 1431506423713299611}
+  navMeshAgent: {fileID: 1431506423713299609}
+  attack1: {fileID: 11400000, guid: 8a4097c5511ed234f94e258b30ccf6c8, type: 2}
+  rotationDelay: 5
+  detectionRadius: 10
+  timeSinceLastSawPlayer: 0
+  dwellTime: 5
+  waypointTolerance: 2
+  combatStanceStateRange: 5
+  attackRange: 2
+  recoveryTime: 2
+  maxRecoveryTime: 2
+  chargeTimer: 10
+  currentTarget: {fileID: 0}
+  detectionLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  escapeRange: 0
+  tooCloseRange: 0
+  distance: 0
+  isInteracting: 0
+  isRecovering: 0
+  suckedByBlackHole: 0
+  isDead: 0
+  strafeLeft: 0
+  strafeRight: 0
 --- !u!1 &2381521116357008394
 GameObject:
   m_ObjectHideFlags: 0

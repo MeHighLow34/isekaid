@@ -6,6 +6,7 @@ namespace Isekai
 {
     public class PursueTargetState : State
     {
+        public ArcherCombatStanceState archerCombatStanceState;
         public CombatStanceState combatStanceState;
         RaycastHit hit;
 
@@ -16,6 +17,10 @@ namespace Isekai
             enemyManager.navMeshAgent.SetDestination(enemyManager.currentTarget.transform.position);
             if (enemyManager.DistanceToEnemy() <= enemyManager.combatStanceStateRange && HasLineOfSight(enemyManager))
             {
+                if(archerCombatStanceState != null)
+                {
+                    return archerCombatStanceState;
+                }
                 return combatStanceState;
             }
             else

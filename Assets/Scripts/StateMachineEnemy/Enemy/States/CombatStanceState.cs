@@ -58,32 +58,3 @@ namespace Isekai
     }
 }
 
-// OLD CODE
-//enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", true);
-//enemyAnimationHandler.enemyAnimator.SetBool("isRecovering", false);
-//cTimer += Time.deltaTime;
-//if (cTimer > enemyManager.chargeTimer)
-//{
-//    cTimer = 0;
-//    enemyAnimationHandler.enemyAnimator.SetBool("isCharging", true);
-//    return chargeState;
-//}
-//enemyManager.FaceTarget();
-//enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", true);
-//enemyAnimationHandler.enemyAnimator.applyRootMotion = true;
-//float distance = Vector3.Distance(enemyManager.transform.position, enemyManager.currentTarget.transform.position);
-//if (distance <= enemyManager.attackRange)
-//{
-//    cTimer = 0;
-//    enemyAnimationHandler.enemyAnimator.SetBool("attack", true);
-//    return attackState;
-//}
-
-//if (distance >= enemyManager.combatStanceStateRange)
-//{
-//    cTimer = 0;
-//    enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", false);
-//    enemyAnimationHandler.enemyAnimator.SetBool("isCharging", false);
-//    return pursueTargetState;
-//}
-//return this;
