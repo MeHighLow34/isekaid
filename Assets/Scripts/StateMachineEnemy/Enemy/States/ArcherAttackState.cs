@@ -8,14 +8,20 @@ namespace Isekai
     public class ArcherAttackState : State
     {
         RaycastHit hit;
-        PursueTargetState pursueTargetState;
+        public ArcherCombatStanceState combatStanceState;
+        public PursueTargetState pursueTargetState;
+        public bool attack;
         public override State Tick(EnemyManager enemyManager, BaseStats enemyStats, EnemyAnimationHandler enemyAnimationHandler)
         {
+            enemyManager.timeBetweenAttacks = 3f;
+            attack = enemyAnimationHandler.enemyAnimator.GetBool("attack");
+            if(attack == false)
+            {
+                return combatStanceState;
+            }
             if(HasLineOfSight(enemyManager))
             {
-
-
-                // Attacking Code Here
+                enemyAnimationHandler.enemyAnimator.SetBool("attack", true);  
                 return this;
             }
             else

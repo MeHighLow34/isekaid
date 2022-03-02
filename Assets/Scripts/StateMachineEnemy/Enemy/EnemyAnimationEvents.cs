@@ -9,7 +9,10 @@ namespace Isekai
     {
         public BoxCollider leftHandCollider;
         
-
+        public void DisableAttack()
+        {
+            GetComponent<EnemyAnimationHandler>().enemyAnimator.SetBool("attack", false);
+        }
         public void EnableLeftHandCollider()
         {
             leftHandCollider.enabled = true;

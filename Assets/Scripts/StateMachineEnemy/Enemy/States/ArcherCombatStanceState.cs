@@ -13,23 +13,20 @@ namespace Isekai
         public ArcherAttackState archerAttackState;
         public override State Tick(EnemyManager enemyManager, BaseStats enemyStats, EnemyAnimationHandler enemyAnimationHandler)
         {
-
+            enemyManager.timeBetweenAttacks -= Time.deltaTime;
             enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", true);
             enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", true);
             enemyManager.FaceTarget();
-         //   if(HasLineOfSight(enemyManager))
-          //  {
-                //
-      //      }
-      //      else
-     //       {
-     //           return pursueTargetState;
-    //        }
             if(HasLineOfSight(enemyManager) == false)
             {
                 enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", false);
                 enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", false);
                 return pursueTargetState;
+            }
+            if(enemyManager.DistanceToEnemy() <= enemyManager.attackRange && enemyManager.timeBetweenAttacks <= 0)
+            {
+                enemyAnimationHandler.enemyAnimator.SetBool("attack", true);
+                return archerAttackState;
             }
             return this; 
         }

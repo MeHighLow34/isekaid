@@ -37,6 +37,8 @@ namespace Isekai
         public float escapeRange;
         public float tooCloseRange;
         public float distance;
+        [Header("Archer Info")]
+        public float timeBetweenAttacks = 3f;
         [Header("Bools")]
         public bool isInteracting;
         public bool isRecovering;
