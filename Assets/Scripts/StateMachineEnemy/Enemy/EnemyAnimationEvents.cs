@@ -8,7 +8,8 @@ namespace Isekai
     public class EnemyAnimationEvents : MonoBehaviour
     {
         public BoxCollider leftHandCollider;
-        
+        public GameObject arrowGameObject;
+        public Transform arrowSpawnPosition;
         public void DisableAttack()
         {
             GetComponent<EnemyAnimationHandler>().enemyAnimator.SetBool("attack", false);
@@ -23,5 +24,10 @@ namespace Isekai
             leftHandCollider.enabled = false;
         }
 
+        public void ShootArrow()
+        {
+          var arrow =  Instantiate(arrowGameObject, arrowSpawnPosition.position, Quaternion.identity);
+            arrow.GetComponent<ProjectileArrow>().target = GetComponent<EnemyManager>().currentTarget.transform;
+        }
     }
 }

@@ -252,6 +252,36 @@ Transform:
   m_Father: {fileID: 643024412}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -1.855, y: 14.706, z: -175.878}
+--- !u!1 &77336472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 77336473}
+  m_Layer: 19
+  m_Name: Arrow Spawn Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &77336473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77336472}
+  m_LocalRotation: {x: 0.46180567, y: -0.5400792, z: 0.5387499, w: 0.45254678}
+  m_LocalPosition: {x: 0.1702, y: 1.5692, z: 0.8069}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2061866647}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &84829598
 GameObject:
   m_ObjectHideFlags: 0
@@ -4795,6 +4825,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftHandCollider: {fileID: 0}
+  arrowGameObject: {fileID: 6094771851385295996, guid: bda324fd7a3f68341af4913072be49ef, type: 3}
+  arrowSpawnPosition: {fileID: 77336473}
+--- !u!4 &2061866647 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1465643500013067126, guid: a2423b1173e3b50468ae8bbc706f079c, type: 3}
+  m_PrefabInstance: {fileID: 1431506424142544765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2090577331
 PrefabInstance:
   m_ObjectHideFlags: 0
