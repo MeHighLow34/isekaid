@@ -26,7 +26,7 @@ namespace Isekai
 
         public void ShootArrow()
         {
-          var arrow =  Instantiate(arrowGameObject, arrowSpawnPosition.position, Quaternion.identity);
+            var arrow =  Instantiate(arrowGameObject, arrowSpawnPosition.position, Quaternion.identity);
             arrow.GetComponent<ProjectileArrow>().target = GetComponent<EnemyManager>().currentTarget.transform;
         }
     }

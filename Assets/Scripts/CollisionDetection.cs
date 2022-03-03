@@ -12,6 +12,7 @@ namespace Isekai
         public  AttackState attackState;
         private void OnTriggerEnter(Collider other)
         {
+            print(other.gameObject.name);
             if(other.gameObject.tag == "Throwable")
             {
                 other.GetComponent<Rigidbody>().AddForce(other.transform.forward * force, ForceMode.Impulse); 
@@ -21,6 +22,11 @@ namespace Isekai
                 other.GetComponentInParent<EnemyHealth>().TakeDamage(damage);
                 var enemyAnimation = other.GetComponentInParent<EnemyAnimationHandler>();
                 enemyAnimation.PlayTargetAnimation("Hit", true);
+                return;
+            }
+            if (other.gameObject.tag == "Enemy")
+            {
+                other.GetComponentInParent<EnemyHealth>().TakeDamage(damage);
             }
            
         }

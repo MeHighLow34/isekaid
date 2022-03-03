@@ -15,6 +15,7 @@ namespace Isekai
         {
             enemyManager.timeBetweenAttacks -= Time.deltaTime;
             enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", true);
+            enemyAnimationHandler.enemyAnimator.updateMode = AnimatorUpdateMode.Normal;
             enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", true);
             enemyManager.FaceTarget();
             if(HasLineOfSight(enemyManager) == false)

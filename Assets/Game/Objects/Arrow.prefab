@@ -48,6 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   arrowSpeed: 13
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 1048576
   isHoming: 0
 --- !u!65 &6094771851385295995
 BoxCollider:

@@ -8,11 +8,13 @@ namespace Isekai
     {
         [SerializeField] public Transform target;
         [SerializeField] float arrowSpeed = 3f;
+        [SerializeField] LayerMask ignoreLayer;
         public bool isHoming;
 
         private void Start()
         {
             transform.LookAt(GetAimLocation());
+            print("I have been spawneed");
         }
 
         private void Update()
@@ -33,7 +35,10 @@ namespace Isekai
 
         private void OnCollisionEnter(Collision collision)
         {
-            print("Hit Something I'm an Arrow");
+            if(collision.gameObject.layer == ignoreLayer)
+            {
+                return;
+            }
             Destroy(gameObject);
         }
     }
