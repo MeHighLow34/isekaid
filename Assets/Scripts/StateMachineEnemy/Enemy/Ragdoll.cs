@@ -13,10 +13,13 @@ namespace Isekai
         [SerializeField] public Rigidbody parentRigidBody = null;
         [SerializeField] public NavMeshAgent agent;
         [SerializeField] public Collider capsuleCollider = null;
+        [Header("Exceptions")]
         [SerializeField] public CapsuleCollider exceptionCollider;
         [SerializeField] public BoxCollider exceptCollider;
         [SerializeField] public BoxCollider exception3DamageCollider;
         [SerializeField] public CapsuleCollider realExceptionCharacterBlockerCollider;
+        [Header("Animation Event Exceptions")]
+        [SerializeField] BoxCollider leftHandCollider;
         private Rigidbody[] ragdollBodies;
         private Collider[] ragdollColliders;
         private CharacterJoint[] ragdollJoints;
@@ -46,16 +49,17 @@ namespace Isekai
             {
                 TurnOffRagdoll();
                 Exceptions();
-                if(realExceptionCharacterBlockerCollider != null)
-                {
-                    realExceptionCharacterBlockerCollider.enabled = true;
-                }
+                
             }
         }
         
 
         private void Exceptions()
         {
+            if(leftHandCollider != null)
+            {
+                leftHandCollider.enabled = false;
+            }
             if (exceptCollider != null)
             {
                 exceptionCollider.enabled = true;

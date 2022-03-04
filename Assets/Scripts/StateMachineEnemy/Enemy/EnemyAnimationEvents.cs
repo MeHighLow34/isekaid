@@ -7,21 +7,27 @@ namespace Isekai
 {
     public class EnemyAnimationEvents : MonoBehaviour
     {
-        public BoxCollider leftHandCollider;
+        EnemyColliderDisabler enemyColliderDisabler;
         public GameObject arrowGameObject;
         public Transform arrowSpawnPosition;
+
+        private void Awake()
+        {
+            enemyColliderDisabler = GetComponent<EnemyColliderDisabler>();
+        }
+
         public void DisableAttack()
         {
             GetComponent<EnemyAnimationHandler>().enemyAnimator.SetBool("attack", false);
         }
         public void EnableLeftHandCollider()
         {
-            leftHandCollider.enabled = true;
+            enemyColliderDisabler.leftHandColliderState = true;
         }
 
         public void DisableLeftHandCollider()
         {
-            leftHandCollider.enabled = false;
+            enemyColliderDisabler.leftHandColliderState = false;
         }
 
         public void ShootArrow()

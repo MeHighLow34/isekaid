@@ -1735,6 +1735,25 @@ Transform:
   m_Father: {fileID: 530184102}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &752600697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7560874781882957113, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
+  m_PrefabInstance: {fileID: 7218415194231359164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &752600710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752600697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0421b106de1d2e64bb11213b429ff26a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHandCollider: {fileID: 2144418395}
+  leftHandColliderState: 0
 --- !u!1 &808396027
 GameObject:
   m_ObjectHideFlags: 0
@@ -4853,6 +4872,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2144418395 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1217921691, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
+  m_PrefabInstance: {fileID: 7218415194231359164}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1431506424142544765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4868,6 +4892,10 @@ PrefabInstance:
       propertyPath: patrolPath
       value: 
       objectReference: {fileID: 1563505619}
+    - target: {fileID: 1528769930, guid: a2423b1173e3b50468ae8bbc706f079c, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2050565026, guid: a2423b1173e3b50468ae8bbc706f079c, type: 3}
       propertyPath: archerAttackState
       value: 
@@ -4940,6 +4968,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Real Archer
       objectReference: {fileID: 0}
+    - target: {fileID: 3014678062883766898, guid: a2423b1173e3b50468ae8bbc706f079c, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2423b1173e3b50468ae8bbc706f079c, type: 3}
 --- !u!1001 &7218415194231359164
@@ -4949,6 +4981,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1217921692, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
+      propertyPath: leftHandCollider
+      value: 
+      objectReference: {fileID: 2144418395}
     - target: {fileID: 1894629421, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
       propertyPath: patrolPath
       value: 
@@ -5129,6 +5165,10 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -7.2759526e-10
       objectReference: {fileID: 0}
+    - target: {fileID: 7218415194738604971, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
+      propertyPath: leftHandCollider
+      value: 
+      objectReference: {fileID: 2144418395}
     - target: {fileID: 7560874781882957113, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
       propertyPath: m_Name
       value: Punk
