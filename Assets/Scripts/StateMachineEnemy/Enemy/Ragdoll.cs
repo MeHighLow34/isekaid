@@ -49,8 +49,10 @@ namespace Isekai
             {
                 TurnOffRagdoll();
                 Exceptions();
-                
+                if(realExceptionCharacterBlockerCollider != null) realExceptionCharacterBlockerCollider.enabled = true;
             }
+
+            
         }
         
 

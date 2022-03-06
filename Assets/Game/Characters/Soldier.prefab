@@ -2715,6 +2715,8 @@ GameObject:
   - component: {fileID: 7218415193354913266}
   - component: {fileID: 7218415193354913267}
   - component: {fileID: 7218415193354913265}
+  - component: {fileID: 142850264}
+  - component: {fileID: 142850267}
   m_Layer: 19
   m_Name: forearm.R
   m_TagString: Untagged
@@ -2813,6 +2815,31 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!65 &142850264
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5318356938953901975}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0014017245, y: 0.004931179, z: 0.0015203484}
+  m_Center: {x: 0.0000499804, y: 0.0018722127, z: 0.00010890221}
+--- !u!114 &142850267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5318356938953901975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8280b198846b8564dbd3279d72d2e64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5399463853433396394
 GameObject:
   m_ObjectHideFlags: 0
@@ -4006,7 +4033,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftHandCollider: {fileID: 1217921691}
+  rightHandCollider: {fileID: 142850264}
   leftHandColliderState: 0
+  rightHandColliderState: 0
 --- !u!1 &7701289390657184286
 GameObject:
   m_ObjectHideFlags: 0

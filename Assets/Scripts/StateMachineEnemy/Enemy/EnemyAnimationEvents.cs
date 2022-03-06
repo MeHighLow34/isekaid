@@ -30,6 +30,16 @@ namespace Isekai
             enemyColliderDisabler.leftHandColliderState = false;
         }
 
+        public void EnableRightHandCollider()
+        {
+            enemyColliderDisabler.rightHandColliderState = true;
+        }
+
+        public void DisableRightHandCollider()
+        {
+            enemyColliderDisabler.rightHandColliderState = false;    
+        }
+
         public void ShootArrow()
         {
             var arrow =  Instantiate(arrowGameObject, arrowSpawnPosition.position, Quaternion.identity);

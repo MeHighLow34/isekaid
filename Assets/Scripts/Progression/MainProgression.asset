@@ -32,6 +32,15 @@ MonoBehaviour:
       - 35
       - 44
       - 55
+      - 55
+    - stat: 1
+      level:
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 11
   - characterClass: 2
     stats:
     - stat: 0

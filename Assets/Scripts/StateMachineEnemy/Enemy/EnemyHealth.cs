@@ -12,7 +12,10 @@ namespace Isekai
         BaseStats stats;
         Ragdoll ragdoll;
         EnemyManager manager;
+        [Header("Post Death Effects")]
         public GameObject canvas;
+        [Header("Punk - Specific")]
+     //   public GameObject heartExplosionParticle;
         public GameObject hearth;
         private void Awake()
         {
@@ -49,6 +52,7 @@ namespace Isekai
             canvas.SetActive(false);
             if(hearth != null)
             {
+              //  Instantiate(heartExplosionParticle, hearth.transform.position, Quaternion.identity);
                 hearth.SetActive(false);
             }
         }
