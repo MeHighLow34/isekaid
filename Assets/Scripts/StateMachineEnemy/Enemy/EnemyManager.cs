@@ -39,6 +39,8 @@ namespace Isekai
         public float distance;
         [Header("Archer Info")]
         public float timeBetweenAttacks = 3f;
+        [Header("Mage Info")]
+        public float timeBetweenShots = 5f;
         [Header("Bools")]
         public bool isInteracting;
         public bool isRecovering;

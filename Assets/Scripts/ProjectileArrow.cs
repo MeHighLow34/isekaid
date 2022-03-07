@@ -10,21 +10,30 @@ namespace Isekai
         [SerializeField] float arrowSpeed = 3f;
         [SerializeField] LayerMask ignoreLayer;
         public bool isHoming;
-
+        [Header("Magic Ball Properties")]
+        public float explosionTimer;
+        public bool isMagic;
         private void Start()
         {
             transform.LookAt(GetAimLocation());
-            print("I have been spawneed");
         }
 
         private void Update()
         {
             if (target == null) return;
+            if(isMagic)
+            {
+                explosionTimer -= Time.deltaTime;
+            }
             if (isHoming)
             {
                 transform.LookAt(GetAimLocation());
             }
             transform.Translate(Vector3.forward * Time.deltaTime * arrowSpeed);
+            if(explosionTimer <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
         private Vector3 GetAimLocation()
         {
