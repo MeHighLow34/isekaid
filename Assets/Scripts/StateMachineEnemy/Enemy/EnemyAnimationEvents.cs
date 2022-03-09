@@ -9,6 +9,7 @@ namespace Isekai
     {
         EnemyColliderDisabler enemyColliderDisabler;
         [Header("Archer")]
+        public GameObject arrowSpawnMagic;
         public GameObject arrowGameObject;
         public Transform arrowSpawnPosition;
         [Header("Basic Mage")]
@@ -47,8 +48,12 @@ namespace Isekai
         {
             var arrow =  Instantiate(arrowGameObject, arrowSpawnPosition.position, Quaternion.identity);
             arrow.GetComponent<ProjectileArrow>().target = GetComponent<EnemyManager>().currentTarget.transform;
+            print(arrow.gameObject.transform.position);
         }
-
+        public void ArrowMagic()
+        {
+            Instantiate(arrowSpawnMagic, arrowSpawnPosition.position, Quaternion.identity);
+        }
         public void ShootMagicBall()
         {
             var magicBall = Instantiate(magicBallGameObject, magicBallSpawnPosition.position, Quaternion.identity);

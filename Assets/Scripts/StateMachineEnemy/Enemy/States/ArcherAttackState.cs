@@ -13,7 +13,7 @@ namespace Isekai
         public bool attack;
         public override State Tick(EnemyManager enemyManager, BaseStats enemyStats, EnemyAnimationHandler enemyAnimationHandler)
         {
-            enemyManager.timeBetweenAttacks = 3f;
+            enemyManager.timeBetweenAttacks = enemyManager.timeBetweenAttacksMaximum;
             attack = enemyAnimationHandler.enemyAnimator.GetBool("attack");
             if(attack == false)
             {

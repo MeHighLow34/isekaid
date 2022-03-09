@@ -264,6 +264,36 @@ Transform:
   m_Father: {fileID: 2541935752229897441}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1591790286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1591790287}
+  m_Layer: 19
+  m_Name: MagicBallSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1591790287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591790286}
+  m_LocalRotation: {x: 0.49688226, y: 0.49688178, z: -0.50309885, w: -0.50309855}
+  m_LocalPosition: {x: -0.041101858, y: 0.2833292, z: 0.009543686}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4429801155955121346}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &100166771529223691
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,7 +320,8 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.881784e-18, y: 0.25047296, z: 2.842171e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1591790287}
   m_Father: {fileID: 531181271617525410}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1907,6 +1938,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowGameObject: {fileID: 0}
   arrowSpawnPosition: {fileID: 0}
+  magicBallGameObject: {fileID: 8224071130562132047, guid: 452258c51d22f934bab88a865532ccfc, type: 3}
+  magicBallSpawnPosition: {fileID: 1591790287}
 --- !u!1 &3078086071017349784
 GameObject:
   m_ObjectHideFlags: 0

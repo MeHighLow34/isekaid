@@ -15,7 +15,7 @@ namespace Isekai
         {
             enemyManager.timeBetweenAttacks -= Time.deltaTime;
             enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", true);
-            enemyAnimationHandler.enemyAnimator.updateMode = AnimatorUpdateMode.Normal;
+           // enemyAnimationHandler.enemyAnimator.updateMode = AnimatorUpdateMode.Normal;
             enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", true);
             enemyManager.FaceTarget();
             if(HasLineOfSight(enemyManager) == false)
@@ -26,6 +26,7 @@ namespace Isekai
             }
             if(enemyManager.DistanceToEnemy() <= enemyManager.attackRange && enemyManager.timeBetweenAttacks <= 0)
             {
+                enemyManager.timeBetweenAttacks = enemyManager.timeBetweenAttacksMaximum;
                 enemyAnimationHandler.enemyAnimator.SetBool("attack", true);
                 return archerAttackState;
             }
