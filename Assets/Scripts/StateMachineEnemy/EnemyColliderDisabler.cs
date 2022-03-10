@@ -10,9 +10,11 @@ namespace Isekai
         [Header("Colliders")]
         [SerializeField] BoxCollider leftHandCollider;
         [SerializeField] BoxCollider rightHandCollider;
+        [SerializeField] public BoxCollider punkHeartCollider;
         [Header("Bools")]
         public bool leftHandColliderState;
         public bool rightHandColliderState;
+        public bool punkHeartColliderState;   
 
         private void LateUpdate()
         {
@@ -23,6 +25,10 @@ namespace Isekai
             if (rightHandCollider != null)
             {
                 rightHandCollider.enabled = rightHandColliderState;
+            }
+            if(punkHeartCollider != null)
+            {
+                punkHeartCollider.enabled = punkHeartColliderState;
             }
         }
     }

@@ -10,9 +10,10 @@ namespace Isekai
         public float force;
         public float damage;
         public  AttackState attackState;
+        public CharacterClass enemyBeingHit;
         private void OnTriggerEnter(Collider other)
         {
-            print(other.gameObject.name);
+            //print(other.gameObject.name);
             if(other.gameObject.tag == "Throwable")
             {
                 other.GetComponent<Rigidbody>().AddForce(other.transform.forward * force, ForceMode.Impulse); 
@@ -24,8 +25,10 @@ namespace Isekai
                 enemyAnimation.PlayTargetAnimation("Hit", true);
                 return;
             }
-            if (other.gameObject.tag == "Enemy")
+            enemyBeingHit = other.GetComponent<BaseStats>().characterClass;
+            if (other.gameObject.tag == "Enemy" && enemyBeingHit != CharacterClass.Soldier)
             {
+                print("hitting a full collider enemy");
                 other.GetComponentInParent<EnemyHealth>().TakeDamage(damage);
             }
            

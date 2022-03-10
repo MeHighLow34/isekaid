@@ -7,6 +7,7 @@ namespace Isekai
 {
     public class EnemyAnimationEvents : MonoBehaviour
     {
+        EnemyAnimationHandler enemyAnimationHandler;
         EnemyColliderDisabler enemyColliderDisabler;
         [Header("Archer")]
         public GameObject arrowSpawnMagic;
@@ -17,9 +18,17 @@ namespace Isekai
         public Transform magicBallSpawnPosition;
         private void Awake()
         {
+            enemyAnimationHandler = GetComponent<EnemyAnimationHandler>();
             enemyColliderDisabler = GetComponent<EnemyColliderDisabler>();
         }
-
+        private void LateUpdate()
+        {
+            if (enemyColliderDisabler.punkHeartCollider != null)
+            {
+                bool isVulnerable = enemyAnimationHandler.enemyAnimator.GetBool("isVulnerable");
+                enemyColliderDisabler.punkHeartColliderState = isVulnerable;    
+            }
+        }
         public void DisableAttack()
         {
             GetComponent<EnemyAnimationHandler>().enemyAnimator.SetBool("attack", false);
@@ -43,7 +52,8 @@ namespace Isekai
         {
             enemyColliderDisabler.rightHandColliderState = false;    
         }
-
+        #region Punk Heart
+        #endregion
         public void ShootArrow()
         {
             var arrow =  Instantiate(arrowGameObject, arrowSpawnPosition.position, Quaternion.identity);
