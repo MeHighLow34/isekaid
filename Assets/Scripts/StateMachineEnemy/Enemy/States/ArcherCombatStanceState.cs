@@ -18,6 +18,11 @@ namespace Isekai
            // enemyAnimationHandler.enemyAnimator.updateMode = AnimatorUpdateMode.Normal;
             enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", true);
             enemyManager.FaceTarget();
+            if(HitAFriend(enemyManager))
+            {
+                print("My Buddy is In Front of me so I'll wait");
+                return this;
+            }
             if(HasLineOfSight(enemyManager) == false)
             {
                 enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", false);
@@ -32,7 +37,18 @@ namespace Isekai
             }
             return this; 
         }
-
+        public bool HitAFriend(EnemyManager enemyManager)
+        {
+            if(Physics.Linecast(rayCastPoint.position, enemyManager.currentTarget.transform.position, out hit))
+            {
+                if(hit.transform.gameObject.tag == "Enemy")
+                {
+                    print("This idiot is in front of me");
+                    return true;
+                }
+            }
+            return false;
+        }
         public bool HasLineOfSight(EnemyManager enemyManager)
         {
             if (Physics.Linecast(rayCastPoint.position, enemyManager.currentTarget.transform.position, out hit))

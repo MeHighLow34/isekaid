@@ -48,7 +48,6 @@ namespace Isekai
         {
             var arrow =  Instantiate(arrowGameObject, arrowSpawnPosition.position, Quaternion.identity);
             arrow.GetComponent<ProjectileArrow>().target = GetComponent<EnemyManager>().currentTarget.transform;
-            print(arrow.gameObject.transform.position);
         }
         public void ArrowMagic()
         {

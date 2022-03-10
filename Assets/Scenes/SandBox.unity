@@ -2652,6 +2652,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d0d31a67b391574d9acdea09feafca3, type: 3}
+--- !u!1 &1309760043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1309760043, guid: a2423b1173e3b50468ae8bbc706f079c, type: 3}
+  m_PrefabInstance: {fileID: 1431506424142544765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1319911026
 GameObject:
   m_ObjectHideFlags: 0
@@ -4772,6 +4777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Real Archer
       objectReference: {fileID: 0}
+    - target: {fileID: 8194495854155823057, guid: a2423b1173e3b50468ae8bbc706f079c, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1309760043}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2423b1173e3b50468ae8bbc706f079c, type: 3}
 --- !u!1001 &2651631049965688668
@@ -4850,10 +4859,34 @@ PrefabInstance:
       propertyPath: baseStats
       value: 
       objectReference: {fileID: 752600705}
+    - target: {fileID: 658026812, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.48515138
+      objectReference: {fileID: 0}
+    - target: {fileID: 658026812, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
+      propertyPath: m_Size.z
+      value: 1.1322016
+      objectReference: {fileID: 0}
+    - target: {fileID: 658026812, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
+      propertyPath: m_Center.x
+      value: 0.13972537
+      objectReference: {fileID: 0}
+    - target: {fileID: 658026812, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
+      propertyPath: m_Center.y
+      value: 0.16932155
+      objectReference: {fileID: 0}
+    - target: {fileID: 658026812, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
+      propertyPath: m_Center.z
+      value: 0.10068225
+      objectReference: {fileID: 0}
     - target: {fileID: 1217921692, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
       propertyPath: baseStats
       value: 
       objectReference: {fileID: 752600705}
+    - target: {fileID: 1297654227, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 1894629421, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
       propertyPath: patrolPath
       value: 
@@ -4868,15 +4901,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1530841556051391054, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1530841556051391054, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1530841556051391054, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.20700002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7180513665884874627, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
       propertyPath: m_RootOrder
@@ -4928,7 +4961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7560874781882957113, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f09b24ce4e59204da1d8870944b079f, type: 3}
