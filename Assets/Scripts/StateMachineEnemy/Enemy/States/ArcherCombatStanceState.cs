@@ -20,7 +20,6 @@ namespace Isekai
             enemyManager.FaceTarget();
             if(HitAFriend(enemyManager))
             {
-                print("My Buddy is In Front of me so I'll wait");
                 return this;
             }
             if(HasLineOfSight(enemyManager) == false)
@@ -41,7 +40,7 @@ namespace Isekai
         {
             if(Physics.Linecast(rayCastPoint.position, enemyManager.currentTarget.transform.position, out hit))
             {
-                if(hit.transform.gameObject.tag == "Enemy")
+                if(hit.transform.gameObject.tag == "Enemy" || hit.transform.gameObject.tag == "EnemyDamagePoint")
                 {
                     print("This idiot is in front of me");
                     return true;

@@ -4724,15 +4724,15 @@ PrefabInstance:
       objectReference: {fileID: 279442190}
     - target: {fileID: 2134062324, guid: a2423b1173e3b50468ae8bbc706f079c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2134062324, guid: a2423b1173e3b50468ae8bbc706f079c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2134062324, guid: a2423b1173e3b50468ae8bbc706f079c, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.20700002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1465643500013067126, guid: a2423b1173e3b50468ae8bbc706f079c, type: 3}
       propertyPath: m_RootOrder
@@ -4784,7 +4784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2241897972257505740, guid: a2423b1173e3b50468ae8bbc706f079c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8194495854155823057, guid: a2423b1173e3b50468ae8bbc706f079c, type: 3}
       propertyPath: canvas
@@ -4803,6 +4803,22 @@ PrefabInstance:
       propertyPath: patrolPath
       value: 
       objectReference: {fileID: 1563505619}
+    - target: {fileID: 669855715, guid: 67e4ece871c7b474c93df5a45a08a6d8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 669855715, guid: 67e4ece871c7b474c93df5a45a08a6d8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 669855715, guid: 67e4ece871c7b474c93df5a45a08a6d8, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937044755, guid: 67e4ece871c7b474c93df5a45a08a6d8, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 279442190}
     - target: {fileID: 2541935752229897441, guid: 67e4ece871c7b474c93df5a45a08a6d8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4850,10 +4866,6 @@ PrefabInstance:
     - target: {fileID: 2885986806757006939, guid: 67e4ece871c7b474c93df5a45a08a6d8, type: 3}
       propertyPath: m_Name
       value: Mage
-      objectReference: {fileID: 0}
-    - target: {fileID: 2885986806757006939, guid: 67e4ece871c7b474c93df5a45a08a6d8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e4ece871c7b474c93df5a45a08a6d8, type: 3}

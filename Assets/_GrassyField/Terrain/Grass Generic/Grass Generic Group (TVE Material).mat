@@ -1,0 +1,330 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Grass Generic Group (TVE Material)
+  m_Shader: {fileID: 4800000, guid: 5bcf549c936e31b4999f2c7e28ba5e31, type: 3}
+  m_ShaderKeywords: MATERIAL_USE_OBJECT_DATA _ALPHATEST_ON _BAKEDMASK_ON _COLOR_TINT
+    _DEBUG_NONE _DISABLE_SSR _RENDER_CLIP_ON _SURFACE_MAP_MASK _WIND_CONTROL_BAKED
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    DisableBatching: true
+    NatureRendererInstancing: true
+    RenderType: Opaque
+  disabledShaderPasses:
+  - TransparentBackface
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: 081af5c0e04008140b98f70f21251b8d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 18ecaaa71b2c4644ca8640598f0e03af, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Depth:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainAlbedoTex:
+        m_Texture: {fileID: 2800000, guid: 081af5c0e04008140b98f70f21251b8d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainMaskTex:
+        m_Texture: {fileID: 2800000, guid: 20fdacccaf59f3e418839157bede4be2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainNormalTex:
+        m_Texture: {fileID: 2800000, guid: 18ecaaa71b2c4644ca8640598f0e03af, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 081af5c0e04008140b98f70f21251b8d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: db2d944624423944dacdad91bf6470d7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normals:
+        m_Texture: {fileID: 2800000, guid: 18ecaaa71b2c4644ca8640598f0e03af, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShiverNoise:
+        m_Texture: {fileID: 2800000, guid: 66dd7d1835f20b8419dbc5544a12688a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Thickness:
+        m_Texture: {fileID: 2800000, guid: 58308494ca52e4e40b3c7875e03579ee, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThicknessMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TranslucencyMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _gustNoise:
+        m_Texture: {fileID: 2800000, guid: 156c5c844ac14b042b7dacdcfcd0981b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _tex3coord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AdvancedCat: 0
+    - _AlphaClipInteractive: 0
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffEnable: 1
+    - _AlphaDstBlend: 0
+    - _AlphaSrcBlend: 1
+    - _BakedMask: 1
+    - _Banner: 0
+    - _BatchingMessage: 0
+    - _BlendMode: 0
+    - _BumpScale: 1
+    - _ColorVariationSpread: 0.2
+    - _CullMode: 0
+    - _CullModeForward: 0
+    - _Cutoff: 0.5
+    - _DEBUG: 3
+    - _DebugGust: 0
+    - _DebugRotation: 0
+    - _DetailNormalMapScale: 1
+    - _DiffusionProfileHash: 3.5648174
+    - _DoubleSidedEnable: 1
+    - _DoubleSidedNormalMode: 2
+    - _DstBlend: 0
+    - _EnableFogOnTransparent: 1
+    - _Float1: 0.1
+    - _GlobalColors: 1
+    - _GlobalHealthiness: 1
+    - _GlobalLeaves: 1
+    - _GlobalOverlay: 1
+    - _GlobalSettingsCat: 0
+    - _GlobalSize: 1
+    - _GlobalSizeFade: 0
+    - _GlobalWetness: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.2
+    - _Glossiness1: 0.2
+    - _GlossyReflections: 1
+    - _Hue: 0
+    - _InteractionAmplitude: 1
+    - _IsAdvancedShader: 1
+    - _IsForwardPathShader: 1
+    - _IsForwardShader: 1
+    - _IsGrassShader: 1
+    - _IsHDPipeline: 1
+    - _IsLeafShader: 1
+    - _IsLitShader: 1
+    - _IsStandardShader: 1
+    - _IsTVEShader: 1
+    - _IsVersion: 141
+    - _Lightness: 0
+    - _METALLICGLOSSMAP: 0
+    - _METALLICGLOSSMAP1: 0
+    - _METALLICGLOSSMAP2: 0
+    - _MainColorMode: 1
+    - _MainMaskValue: 0
+    - _MainNormalValue: 1
+    - _MainOcclusionValue: 0.5
+    - _MainShadingCat: 0
+    - _MainSmoothnessValue: 0.2
+    - _MaterialShadingCat: 0
+    - _MaterialShadingSpaceDrawer: 0
+    - _Metallic: 0
+    - _Metallic1: 0
+    - _Mode: 0
+    - _MotionAmplitude_10: 0.522
+    - _MotionAmplitude_20: 0
+    - _MotionAmplitude_30: 0
+    - _MotionAmplitude_32: 0.235
+    - _MotionCat: 0
+    - _MotionScale_10: 0.5
+    - _MotionScale_20: 0
+    - _MotionScale_30: 0
+    - _MotionScale_32: 30
+    - _MotionSpeed_10: 6
+    - _MotionSpeed_20: 0
+    - _MotionSpeed_30: 0
+    - _MotionSpeed_32: 30
+    - _MotionVariation_10: 30
+    - _MotionVariation_20: 0
+    - _MotionVariation_30: 0
+    - _MotionVariation_32: 30
+    - _MotionVertical_20: 0
+    - _Motion_10: 1
+    - _Motion_20: 1
+    - _Motion_30: 1
+    - _Motion_32: 1
+    - _NatureRendererDistanceControl: 1
+    - _ObjectHeight: 0.5
+    - _ObjectOcclusionValue: 1.44
+    - _ObjectRadius: 0.5
+    - _ObjectThicknessValue: 0
+    - _OcclusionProbesIndirect: 1
+    - _OcclusionProbesStrength: 0.7058824
+    - _OcclusionStrength: 1
+    - _OverlayContrast: 0
+    - _OverlayUVTilling: 1
+    - _OverlayVariation: 1
+    - _Parallax: 0.02
+    - _ReceivesSSR: 0
+    - _RenderMode_ResetInteractive: 0
+    - _RenderMode_TransparentInteractive: 0
+    - _RenderQueueType: 1
+    - _RenderingCat: 0
+    - _RequireSplitLighting: 0
+    - _Saturation: 0
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _StencilRef: 0
+    - _StencilRefDepth: 8
+    - _StencilRefDistortionVec: 4
+    - _StencilRefGBuffer: 10
+    - _StencilRefMV: 40
+    - _StencilWriteMask: 6
+    - _StencilWriteMaskDepth: 8
+    - _StencilWriteMaskDistortionVec: 4
+    - _StencilWriteMaskGBuffer: 14
+    - _StencilWriteMaskMV: 40
+    - _StiffnessVariation: 0.3
+    - _SubsurfaceAngleValue: 8
+    - _SubsurfaceDiffusion: 3.5648174
+    - _SubsurfaceMaxValue: 1
+    - _SubsurfaceMinValue: 0
+    - _SubsurfaceMode: 0
+    - _SubsurfaceValue: 1
+    - _SubsurfaceViewValue: 1
+    - _SurfaceType: 0
+    - _TransAmbient: 0.2
+    - _TransDirect: 1
+    - _TransNormalDistortion: 0.1
+    - _TransScattering: 2
+    - _TransShadow: 0.9
+    - _Translucency: 1
+    - _TranslucencyDistortion: 0.5
+    - _TranslucencyScattering: 2
+    - _TransparentBackfaceEnable: 0
+    - _TransparentCullMode: 0
+    - _TransparentDepthPostpassEnable: 0
+    - _TransparentDepthPrepassEnable: 0
+    - _TransparentSortPriority: 0
+    - _TransparentZWrite: 1
+    - _TurbulenceStrength: 1
+    - _UVMask: 0
+    - _UVSec: 0
+    - _UseShadowThreshold: 0
+    - _VertexNormalStrength: 1
+    - _VertexOcclusion: 0
+    - _VertexPositionMask: 0
+    - _WIND_CONTROL: 0
+    - _WindStrength: 1
+    - _WindVariation: 0.3
+    - _ZTestDepthEqualForOpaque: 3
+    - _ZTestGBuffer: 3
+    - _ZTestTransparent: 4
+    - _ZWrite: 1
+    - __blend: 0
+    - __clip: 0
+    - __cull: 0
+    - __dirty: 0
+    - __dst: 0
+    - __normals: 0
+    - __premul: 0
+    - __priority: 0
+    - __src: 1
+    - __surface: 0
+    - __zw: 1
+    - _material_batching: 0
+    - _render_blend: 0
+    - _render_clip: 1
+    - _render_cull: 0
+    - _render_dst: 0
+    - _render_mode: 0
+    - _render_normals: 2
+    - _render_priority: 0
+    - _render_src: 1
+    - _render_zw: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DiffusionProfileAsset: {r: 2.2888926e+38, g: 1.2389358e-26, b: 7.69327e-37,
+        a: 0.00018220427}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlossRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _GlossRemap1: {r: 0, g: 1, b: 0, a: 0}
+    - _GustHighlightColor: {r: 1, g: 1, b: 1, a: 0}
+    - _HSL: {r: 0, g: 0, b: 0, a: 0}
+    - _HSLVariation: {r: -0.02, g: -0.05, b: -0.1, a: 0}
+    - _LowVegetationStiffness: {r: 0, g: 1, b: 0, a: 0}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _MaxBoundsInfo: {r: 0.728, g: 0.728, b: 0.728, a: 0}
+    - _OcclusionRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _ScaleFade: {r: 30, g: 40, b: 0, a: 0}
+    - _Shiver: {r: 1, g: 1, b: 0, a: 0}
+    - _SubsurfaceColor: {r: 0.3315085, g: 0.490566, b: 0, a: 1}
+    - _SubsurfaceDiffusion_asset: {r: 2.2888926e+38, g: 1.2389358e-26, b: 7.69327e-37,
+        a: 0.00018220427}
+    - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _TintVariation: {r: 1, g: 1, b: 1, a: 1}
+    - _TranslucencyColor: {r: 0.7568, g: 0.7019, b: 0.24309996, a: 1}
+    - _TranslucencyTint: {r: 0, g: 0, b: 0, a: 0}
+    - _TranslucentColor: {r: 0.60294116, g: 0.60294116, b: 0.60294116, a: 0}
+    - _WindDirectionAndStrength: {r: 1, g: 1, b: 1, a: 1}
+    - _WindFade: {r: 50, g: 20, b: 0, a: 0}
+    - _render_normals_options: {r: 1, g: 1, b: 1, a: 0}

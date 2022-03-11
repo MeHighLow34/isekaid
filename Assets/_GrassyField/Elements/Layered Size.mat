@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Layered Size
+  m_Shader: {fileID: 4800000, guid: 44ed721ce93ea8244992d9c5ae9a8303, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _ControlTex:
+        m_Texture: {fileID: 28129165006780656, guid: 3024a7bec1d93844aa434d93c31f96d3,
+          type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _1: 1
+    - _2: 0
+    - _3: 1
+    - _4: 1
+    - _AddPrecomputedVelocity: 1
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffEnable: 0
+    - _AlphaDstBlend: 0
+    - _AlphaSrcBlend: 1
+    - _BlendMode: 0
+    - _CullMode: 2
+    - _CullModeForward: 2
+    - _DoubleSidedEnable: 0
+    - _DoubleSidedNormalMode: 2
+    - _DstBlend: 0
+    - _EnableFogOnTransparent: 1
+    - _ReceivesSSR: 0
+    - _RenderQueueType: 5
+    - _RequireSplitLighting: 0
+    - _SrcBlend: 1
+    - _StencilRef: 0
+    - _StencilRefDepth: 0
+    - _StencilRefDistortionVec: 4
+    - _StencilRefGBuffer: 2
+    - _StencilRefMV: 32
+    - _StencilWriteMask: 6
+    - _StencilWriteMaskDepth: 8
+    - _StencilWriteMaskDistortionVec: 4
+    - _StencilWriteMaskGBuffer: 14
+    - _StencilWriteMaskMV: 40
+    - _SurfaceType: 1
+    - _TransparentBackfaceEnable: 0
+    - _TransparentCullMode: 2
+    - _TransparentSortPriority: 0
+    - _TransparentZWrite: 1
+    - _UseShadowThreshold: 0
+    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestGBuffer: 4
+    - _ZTestTransparent: 4
+    - _ZWrite: 1
+    m_Colors:
+    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
