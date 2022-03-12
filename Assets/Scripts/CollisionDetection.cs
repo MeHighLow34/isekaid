@@ -11,6 +11,8 @@ namespace Isekai
         public float damage;
         public  AttackState attackState;
         public CharacterClass enemyBeingHit;
+        [Header("VFX")]
+        public GameObject bloodVFX;
         private void OnTriggerEnter(Collider other)
         {
             //print(other.gameObject.name);
@@ -30,6 +32,12 @@ namespace Isekai
             {
                 print("hitting a full collider enemy");
                 other.GetComponentInParent<EnemyHealth>().TakeDamage(damage);
+                Instantiate(bloodVFX, other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(transform.position), Quaternion.identity);
+                if (other.GetComponentInParent<EnemyManager>().hasHitReaction)
+                {
+                    var enemyAnimation = other.GetComponentInParent<EnemyAnimationHandler>();
+                    enemyAnimation.PlayTargetAnimation("Hit", true);
+                }
             }
            
         }

@@ -23,11 +23,11 @@ namespace Isekai
         }
         private void LateUpdate()
         {
-            if (enemyColliderDisabler.punkHeartCollider != null)
-            {
-                bool isVulnerable = enemyAnimationHandler.enemyAnimator.GetBool("isVulnerable");
-                enemyColliderDisabler.punkHeartColliderState = isVulnerable;    
-            }
+            //if (enemyColliderDisabler.punkHeartCollider != null)
+            //{
+            //    bool isVulnerable = enemyAnimationHandler.enemyAnimator.GetBool("isVulnerable");
+            //    enemyColliderDisabler.punkHeartColliderState = isVulnerable;    
+            //}
         }
         public void DisableAttack()
         {

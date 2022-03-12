@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 
 namespace Isekai
 {
@@ -12,6 +12,9 @@ namespace Isekai
         BaseStats stats;
         Ragdoll ragdoll;
         EnemyManager manager;
+        [Header("Effects")]
+        public GameObject floatingText;
+        public Transform floatingTextSpawnPosition;
         [Header("Post Death Effects")]
         public GameObject canvas;
         [Header("Punk - Specific")]
@@ -35,11 +38,20 @@ namespace Isekai
 
         public void TakeDamage(float damage)
         {
+            if(floatingText != null && health > 0)
+            {
+                ShowFloatingText(damage);
+            }
             health -= damage;
             if (health <= 0)
             {
                 HandleDeath();
             }
+        }
+        void ShowFloatingText(float damage)
+        {
+            var go = Instantiate(floatingText, floatingTextSpawnPosition.position, Quaternion.identity, floatingTextSpawnPosition);
+            go.GetComponentInChildren<TextMeshPro>().text = damage.ToString();
         }
 
         private void HandleDeath()

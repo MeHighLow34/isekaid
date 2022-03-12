@@ -49,6 +49,7 @@ namespace Isekai
         public bool isDead;
         public bool strafeLeft;
         public bool strafeRight;
+        public bool hasHitReaction;
         private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
