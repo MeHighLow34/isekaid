@@ -2314,7 +2314,7 @@ MonoBehaviour:
   isDead: 0
   strafeLeft: 0
   strafeRight: 0
-  hasHitReaction: 0
+  hasHitReaction: 1
 --- !u!114 &919132148880820491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2345,6 +2345,8 @@ MonoBehaviour:
   arrowSpawnPosition: {fileID: 0}
   magicBallGameObject: {fileID: 8224071130562132047, guid: 452258c51d22f934bab88a865532ccfc, type: 3}
   magicBallSpawnPosition: {fileID: 1591790287}
+  pushBackForce: 0.5
+  pushBackVecto: {x: 0, y: 0.07, z: -0.25}
 --- !u!114 &2651631049965688671
 MonoBehaviour:
   m_ObjectHideFlags: 0

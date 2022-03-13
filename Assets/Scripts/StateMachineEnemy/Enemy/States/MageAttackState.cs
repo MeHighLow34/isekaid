@@ -14,6 +14,7 @@ namespace Isekai
         {
             enemyManager.timeBetweenShots = 5f;
             enemyAnimationHandler.enemyAnimator.updateMode = AnimatorUpdateMode.Normal;
+            enemyManager.FaceTarget();
             attack = enemyAnimationHandler.enemyAnimator.GetBool("attack");
             if (attack == false)
             {

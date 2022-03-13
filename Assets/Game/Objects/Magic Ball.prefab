@@ -140,13 +140,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  projectileSpeed: 7
+  projectileSpeed: 8
   ignoreLayer:
     serializedVersion: 2
     m_Bits: 0
   explosionVFX: {fileID: 100006, guid: 28ccd38a41e256a4e8fea96f5a8d039d, type: 3}
   isHoming: 1
-  explosionTimer: 25
+  explosionTimer: 8
   isMagic: 1
 --- !u!54 &285369430
 Rigidbody:

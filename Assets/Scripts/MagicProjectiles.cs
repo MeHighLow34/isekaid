@@ -48,7 +48,8 @@ namespace Isekai
         {
             if(collision.gameObject.tag == target.gameObject.tag)
             {
-                Explosion();   
+                Explosion();
+                DamagePlayer(collision);
             }
         }
 
@@ -57,6 +58,15 @@ namespace Isekai
         {
             Instantiate(explosionVFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
+        }
+
+        private void DamagePlayer(Collision collision)
+        {
+            Health playerHealth = collision.gameObject.GetComponent<Health>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(10);
+            }
         }
     }
 }

@@ -36,7 +36,9 @@ namespace Isekai
                 if (other.GetComponentInParent<EnemyManager>().hasHitReaction)
                 {
                     var enemyAnimation = other.GetComponentInParent<EnemyAnimationHandler>();
-                    enemyAnimation.PlayTargetAnimation("Hit", true);
+                    //enemyAnimation.PlayTargetAnimation("Hit", true);
+                    // enemyAnimation.enemyAnimator.CrossFade("Hit", 0.2f);
+                    enemyAnimation.enemyAnimator.SetBool("beingHit", true);
                 }
             }
            

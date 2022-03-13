@@ -16,6 +16,9 @@ namespace Isekai
         [Header("Basic Mage")]
         public GameObject magicBallGameObject;
         public Transform magicBallSpawnPosition;
+        public float pushBackForce;
+        public Vector3 pushBackVecto;
+        public float pushBackRange;
         private void Awake()
         {
             enemyAnimationHandler = GetComponent<EnemyAnimationHandler>();
@@ -67,6 +70,16 @@ namespace Isekai
         {
             var magicBall = Instantiate(magicBallGameObject, magicBallSpawnPosition.position, Quaternion.identity);
             magicBall.GetComponent<MagicProjectiles>().target = GetComponent<EnemyManager>().currentTarget.transform;
+        }
+
+        public void PushPlayerBack()
+        {
+            float distanceFromPlayer = Vector3.Distance(GetComponent<EnemyManager>().transform.position, GetComponent<EnemyManager>().currentTarget.transform.position);
+            if (distanceFromPlayer <= pushBackRange)
+            {
+                PlayerMovement playerMovement = GetComponent<EnemyManager>().currentTarget.GetComponent<PlayerMovement>();
+                playerMovement.Jump(pushBackVecto, pushBackForce / Time.deltaTime);
+            }
         }
     }
 }
