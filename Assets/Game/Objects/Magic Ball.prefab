@@ -146,7 +146,7 @@ MonoBehaviour:
     m_Bits: 0
   explosionVFX: {fileID: 100006, guid: 28ccd38a41e256a4e8fea96f5a8d039d, type: 3}
   isHoming: 1
-  explosionTimer: 8
+  explosionTimer: 5
   isMagic: 1
 --- !u!54 &285369430
 Rigidbody:

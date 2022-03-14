@@ -28,6 +28,10 @@ namespace Isekai
                 return;
             }
             enemyBeingHit = other.GetComponent<BaseStats>().characterClass;
+            if(enemyBeingHit == null)
+            {
+                enemyBeingHit = other.GetComponentInParent<BaseStats>().characterClass;
+            }
             if (other.gameObject.tag == "Enemy" && enemyBeingHit != CharacterClass.Soldier)
             {
                 print("hitting a full collider enemy");
@@ -36,8 +40,6 @@ namespace Isekai
                 if (other.GetComponentInParent<EnemyManager>().hasHitReaction)
                 {
                     var enemyAnimation = other.GetComponentInParent<EnemyAnimationHandler>();
-                    //enemyAnimation.PlayTargetAnimation("Hit", true);
-                    // enemyAnimation.enemyAnimator.CrossFade("Hit", 0.2f);
                     enemyAnimation.enemyAnimator.SetBool("beingHit", true);
                 }
             }
