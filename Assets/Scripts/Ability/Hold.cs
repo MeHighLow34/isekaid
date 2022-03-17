@@ -67,8 +67,9 @@ namespace Isekai
 
             if (heldObj != null)
             {
-                if (Input.GetKeyDown(KeyCode.T))
+                if (Input.GetKey(KeyCode.T))
                 {
+                    print("Throwing Object");
                     ThrowObject();
                     canUse = false;      // Here we used the ability so we start a timer
                     time = timeLimit;   // we are using timeLimit to set the max value...
@@ -92,7 +93,6 @@ namespace Isekai
         }
         private void MoveObject()
         {
-            print("Dude");
             if(Vector3.Distance(heldObj.transform.position, holdParent.position) > 0.1f)
             {
                 Vector3 moveDirection = (holdParent.position - heldObj.transform.position);
@@ -121,7 +121,8 @@ namespace Isekai
                 Rigidbody objRig = holdObject.GetComponent<Rigidbody>();
                 objRig.useGravity = false;
                 objRig.drag = 10;
-
+              //  objRig.velocity = Vector3.zero;
+                objRig.freezeRotation = true;
                 objRig.transform.parent = holdParent;
                 heldObj = holdObject;
                 animationManager.animator.SetBool("Holding", true);
