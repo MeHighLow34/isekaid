@@ -15,6 +15,9 @@ namespace Isekai
         public NavMeshAgent navMeshAgent;
         [Header("Attack Action")]
         public EnemyAttackAction attack1;
+        [Header("Knight Attack Actin")]
+        public EnemyAttackAction knightAttack1;
+        public EnemyAttackAction knightAttack2;
         [Header("Rotation")]
         public float rotationDelay;
         [Header("Idle/Patrol Information")]
