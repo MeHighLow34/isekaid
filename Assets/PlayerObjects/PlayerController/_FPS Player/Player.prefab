@@ -86,10 +86,10 @@ MonoBehaviour:
   animationManager: {fileID: 0}
   abilityIntermediary: {fileID: 0}
   holdParent: {fileID: 1129051294}
-  holdRange: 10
-  moveForce: 250
+  holdRange: 25
+  moveForce: 100
   cameraTransform: {fileID: 7085721663646366569}
-  shootPower: 25
+  shootPower: 55
 --- !u!1 &489933039
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,6 +719,7 @@ GameObject:
   - component: {fileID: 1884645999122985397}
   - component: {fileID: 7351033182843530669}
   - component: {fileID: 6747072551291282212}
+  - component: {fileID: 795461017}
   m_Layer: 19
   m_Name: Player
   m_TagString: Player
@@ -975,6 +976,7 @@ MonoBehaviour:
   level: 1
   characterClass: 0
   progression: {fileID: 11400000, guid: 9ce57e0c66d0e3845be797c886691f79, type: 2}
+  experience: {fileID: 0}
 --- !u!114 &961271945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1178,6 +1180,20 @@ MonoBehaviour:
   abilityAttack: 0
   playerManager: {fileID: 0}
   abilityManager: {fileID: 0}
+--- !u!114 &795461017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7085721664118310506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30e11159588468841bf8b31599d6bc1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats: {fileID: 0}
+  experiencePoints: 0
 --- !u!1001 &1447274080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1591,14 +1607,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
---- !u!1 &919132148320869169 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
-  m_PrefabInstance: {fileID: 1447274080}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &543450652261400971 stripped
+--- !u!4 &2229452826923520812 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2229452827825534284, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
   m_PrefabInstance: {fileID: 1447274080}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &5866666020596554737 stripped
@@ -1606,9 +1617,14 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
   m_PrefabInstance: {fileID: 1447274080}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2229452826923520812 stripped
+--- !u!4 &543450652261400971 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2229452827825534284, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
+  m_PrefabInstance: {fileID: 1447274080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &919132148320869169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
   m_PrefabInstance: {fileID: 1447274080}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &12827842
@@ -1718,8 +1734,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8129857486356055845, guid: 259746fbc59909b4eb14377c46a80363, type: 3}
       propertyPath: damage
-      value: 3
+      value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 8129857486356055845, guid: 259746fbc59909b4eb14377c46a80363, type: 3}
+      propertyPath: bloodVFX
+      value: 
+      objectReference: {fileID: 334530684341706250, guid: 3cdea685152641749971a219b3ffbc14, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 259746fbc59909b4eb14377c46a80363, type: 3}
 --- !u!1 &1037714073545248 stripped

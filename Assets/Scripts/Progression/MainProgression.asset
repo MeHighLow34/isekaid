@@ -23,6 +23,14 @@ MonoBehaviour:
       - 44
       - 55
       - 66
+    - stat: 2
+      level:
+      - 33
+      - 44
+      - 55
+      - 66
+      - 77
+      - 88
   - characterClass: 1
     stats:
     - stat: 0
