@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1478.8682, g: 1831.9521, b: 2425.4668, a: 1}
+  m_IndirectSpecularColor: {r: 1478.8824, g: 1831.6825, b: 2424.8618, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4335,15 +4335,15 @@ PrefabInstance:
       objectReference: {fileID: 1563505619}
     - target: {fileID: 669855715, guid: 67e4ece871c7b474c93df5a45a08a6d8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 669855715, guid: 67e4ece871c7b474c93df5a45a08a6d8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 669855715, guid: 67e4ece871c7b474c93df5a45a08a6d8, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.20700002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1937044755, guid: 67e4ece871c7b474c93df5a45a08a6d8, type: 3}
       propertyPath: camera
@@ -4399,7 +4399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2885986806757006939, guid: 67e4ece871c7b474c93df5a45a08a6d8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e4ece871c7b474c93df5a45a08a6d8, type: 3}
@@ -4633,6 +4633,26 @@ PrefabInstance:
       propertyPath: patrolPath
       value: 
       objectReference: {fileID: 130731293}
+    - target: {fileID: 874011934, guid: 4069ab06d38111e4982b65e902a96466, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 279442190}
+    - target: {fileID: 1747567874, guid: 4069ab06d38111e4982b65e902a96466, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747567874, guid: 4069ab06d38111e4982b65e902a96466, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747567874, guid: 4069ab06d38111e4982b65e902a96466, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214214987544852500, guid: 4069ab06d38111e4982b65e902a96466, type: 3}
+      propertyPath: combatStanceStateRange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6956794609846126626, guid: 4069ab06d38111e4982b65e902a96466, type: 3}
       propertyPath: m_Name
       value: Knight

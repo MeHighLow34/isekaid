@@ -19,6 +19,8 @@ namespace Isekai
         public float pushBackForce;
         public Vector3 pushBackVecto;
         public float pushBackRange;
+        [Header("Knight")]
+        public KnightAttackState knightAttackState;
         private void Awake()
         {
             enemyAnimationHandler = GetComponent<EnemyAnimationHandler>();
@@ -80,6 +82,11 @@ namespace Isekai
                 PlayerMovement playerMovement = GetComponent<EnemyManager>().currentTarget.GetComponent<PlayerMovement>();
                 playerMovement.Jump(pushBackVecto, pushBackForce / Time.deltaTime);
             }
+        }
+
+        public void LookAtPlayerKnight()
+        {
+            knightAttackState.followsTarget = true;
         }
     }
 }
