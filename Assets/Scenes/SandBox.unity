@@ -4617,22 +4617,6 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 279442190}
-    - target: {fileID: 1747567874, guid: 4069ab06d38111e4982b65e902a96466, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1747567874, guid: 4069ab06d38111e4982b65e902a96466, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1747567874, guid: 4069ab06d38111e4982b65e902a96466, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3214214987544852500, guid: 4069ab06d38111e4982b65e902a96466, type: 3}
-      propertyPath: combatStanceStateRange
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6956794609846126626, guid: 4069ab06d38111e4982b65e902a96466, type: 3}
       propertyPath: m_Name
       value: Knight

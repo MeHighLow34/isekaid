@@ -74,6 +74,16 @@ namespace Isekai
             magicBall.GetComponent<MagicProjectiles>().target = GetComponent<EnemyManager>().currentTarget.transform;
         }
 
+        public void EnableSwordKnight()
+        {
+            enemyColliderDisabler.knightSwordCollider = true;
+        }
+
+        public void DisableSwordKnight()
+        {
+            enemyColliderDisabler.knightSwordCollider = false;
+        }
+
         public void PushPlayerBack()
         {
             float distanceFromPlayer = Vector3.Distance(GetComponent<EnemyManager>().transform.position, GetComponent<EnemyManager>().currentTarget.transform.position);

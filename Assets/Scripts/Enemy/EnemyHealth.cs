@@ -7,11 +7,15 @@ namespace Isekai
 {
     public class EnemyHealth : MonoBehaviour
     {
+       
         public float health;
         float maxHealth;
         BaseStats stats;
         Ragdoll ragdoll;
         EnemyManager manager;
+        [Header("Experience")]
+        public Experience experience;
+        public float experiencePoints = 10;
         [Header("Effects")]
         public GameObject floatingText;
         public Transform floatingTextSpawnPosition;
@@ -22,6 +26,8 @@ namespace Isekai
         public GameObject hearth;
         private void Awake()
         {
+            experience = FindObjectOfType<Experience>();
+         
 
             ragdoll = GetComponent<Ragdoll>();
             manager = GetComponent<EnemyManager>();
@@ -29,6 +35,8 @@ namespace Isekai
             stats = GetComponent<BaseStats>();
             maxHealth = stats.GetStat(Stat.Health);
             health = maxHealth;
+
+            experiencePoints = stats.GetStat(Stat.ExperienceToGive)/3;
         }
 
         public float GetDecimal()
@@ -56,6 +64,7 @@ namespace Isekai
 
         private void HandleDeath()
         {
+            experience.GainExp(experiencePoints);
             health = 0;
             ragdoll.disabled = false;
             ragdoll.state = true;

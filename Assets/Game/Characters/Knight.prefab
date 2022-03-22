@@ -1980,7 +1980,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000071153045, y: 0.48433504, z: 0.0000008456409}
+  m_ConnectedAnchor: {x: -0.00000068638474, y: 0.48433504, z: 0.0000008204952}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2071,7 +2071,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4134534011302773240}
-  m_LocalRotation: {x: 0.0013455808, y: 0.00964111, z: 0.99985087, w: -0.014265016}
+  m_LocalRotation: {x: 0.0013455808, y: 0.009641136, z: 0.99985087, w: -0.014265042}
   m_LocalPosition: {x: 0.08781862, y: -0.060124587, z: -0.0076971054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3222,6 +3222,7 @@ GameObject:
   - component: {fileID: 919132148710820236}
   - component: {fileID: 919132148710820237}
   - component: {fileID: 1100415021}
+  - component: {fileID: 875163505}
   m_Layer: 19
   m_Name: Knight
   m_TagString: Enemy
@@ -3382,7 +3383,7 @@ MonoBehaviour:
   timeSinceLastSawPlayer: 0
   dwellTime: 5
   waypointTolerance: 2
-  combatStanceStateRange: 3.33
+  combatStanceStateRange: 5
   attackRange: 2
   recoveryTime: 2
   maxRecoveryTime: 2
@@ -3430,6 +3431,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+  experience: {fileID: 0}
+  experiencePoints: 10
   floatingText: {fileID: 0}
   floatingTextSpawnPosition: {fileID: 0}
   canvas: {fileID: 0}
@@ -3449,6 +3452,7 @@ MonoBehaviour:
   level: 1
   characterClass: 4
   progression: {fileID: 11400000, guid: 9ce57e0c66d0e3845be797c886691f79, type: 2}
+  experience: {fileID: 0}
 --- !u!114 &1100415021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3470,6 +3474,26 @@ MonoBehaviour:
   pushBackVecto: {x: 0, y: 0, z: 0}
   pushBackRange: 0
   knightAttackState: {fileID: 445747598}
+--- !u!114 &875163505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6956794609846126626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0421b106de1d2e64bb11213b429ff26a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHandCollider: {fileID: 0}
+  rightHandCollider: {fileID: 0}
+  punkHeartCollider: {fileID: 0}
+  swordCollider: {fileID: 4194815779455279098}
+  leftHandColliderState: 0
+  rightHandColliderState: 0
+  punkHeartColliderState: 0
+  knightSwordCollider: 0
 --- !u!1 &7071910349499145222
 GameObject:
   m_ObjectHideFlags: 0
@@ -4164,6 +4188,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79d1401cd4e6cbf4ab1383a0a3218a2e, type: 3}
+--- !u!65 &4194815779455279098 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8861588999228108973, guid: 79d1401cd4e6cbf4ab1383a0a3218a2e, type: 3}
+  m_PrefabInstance: {fileID: 4669188859708485463}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2786414868570415248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7378900637349777351, guid: 79d1401cd4e6cbf4ab1383a0a3218a2e, type: 3}

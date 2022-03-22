@@ -7,15 +7,22 @@ namespace Isekai
 {
     public class EnemyColliderDisabler : MonoBehaviour
     {
-        [Header("Colliders")]
+        [Header("Colliders-Punk")]
         [SerializeField] BoxCollider leftHandCollider;
         [SerializeField] BoxCollider rightHandCollider;
         [SerializeField] public BoxCollider punkHeartCollider;
+        [Header("Colliders-Knight")]
+        [SerializeField] BoxCollider swordCollider;
         [Header("Bools")]
         public bool leftHandColliderState;
         public bool rightHandColliderState;
-        public bool punkHeartColliderState;   
+        public bool punkHeartColliderState;
+        public bool knightSwordCollider;
 
+        private void Awake()
+        {
+            print("lol");
+        }
         private void LateUpdate()
         {
             if(leftHandCollider != null)
@@ -30,6 +37,11 @@ namespace Isekai
             {
                 punkHeartCollider.enabled = punkHeartColliderState;
             }
+            if(swordCollider != null)
+            {
+                swordCollider.enabled = knightSwordCollider;
+            }
+            
         }
     }
 }

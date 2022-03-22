@@ -1,4 +1,4 @@
 public enum Stat
 {
-   Health, Damage, ExperienceToLevelUp
+   Health, Damage, ExperienceToLevelUp, ExperienceToGive
 }
