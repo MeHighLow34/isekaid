@@ -19,10 +19,6 @@ namespace Isekai
         public bool punkHeartColliderState;
         public bool knightSwordCollider;
 
-        private void Awake()
-        {
-            print("lol");
-        }
         private void LateUpdate()
         {
             if(leftHandCollider != null)

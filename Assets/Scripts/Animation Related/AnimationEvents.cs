@@ -9,7 +9,12 @@ namespace Isekai
     {
         [Header("Attacking")]
         public BoxCollider weaponBoxCollider;
+        public Animator animator;
 
+        private void Awake()
+        {
+            animator = GetComponent<Animator>();
+        }
 
         private void Start()
         {
@@ -24,6 +29,16 @@ namespace Isekai
         public void DisableCollider()
         {
             weaponBoxCollider.enabled = false;
+        }
+
+        public void EnableCombo()
+        {
+            animator.SetBool("canDoCombo", true);
+        }
+
+        public void DisableCombo()
+        {
+            animator.SetBool("canDoCombo", false);
         }
     }
 }

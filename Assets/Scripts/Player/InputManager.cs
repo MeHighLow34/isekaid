@@ -14,6 +14,8 @@ namespace Isekai
         [Header("Dependencies")]
         public PlayerManager playerManager;
         public AbilityManager abilityManager;
+        [Header("Flags")]
+        public bool comboFlag;
         private void Awake()
         {
             abilityManager = GetComponent<AbilityManager>();
@@ -48,14 +50,31 @@ namespace Isekai
         {
             if (lightAttack)
             {
-                if(playerManager.isInteracting)
+                if(playerManager.canDoCombo)
                 {
-                    print("You can't attack when you are already attacking silly"); // before combo obvio
-                    lightAttack = false;
-                    return;
+                    comboFlag = true;
+                    playerAttacker.HandleLightAttackCombo();
+                    comboFlag = false;
+                }
+                else
+                {
+                    if (playerManager.isInteracting)
+                    {
+                        lightAttack = false;
+                        return;
+                    }
+                    playerAttacker.HandleLightAttack();
                 }
 
-                playerAttacker.HandleLightAttack();
+
+                //if(playerManager.isInteracting)
+                //{
+                //    lightAttack = false;
+                //    return;
+                //}
+
+                //playerAttacker.HandleLightAttack();
+                //lightAttack = false;
                 lightAttack = false;
             }
         }

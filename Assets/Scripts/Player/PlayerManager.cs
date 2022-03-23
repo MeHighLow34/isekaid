@@ -13,6 +13,7 @@ namespace Isekai
         public InputManager inputManager;
         [Header("Bools")]
         public bool isInteracting;
+        public bool canDoCombo;
         private void Awake()
         {
             inputManager = GetComponent<InputManager>();
@@ -36,6 +37,7 @@ namespace Isekai
         {
             animationManager.animator.SetBool("Grounded", playerMovement.grounded);
             isInteracting = animationManager.animator.GetBool("isInteracting");
+            canDoCombo = animationManager.animator.GetBool("canDoCombo");
         }
     }
 }
