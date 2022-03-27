@@ -17,7 +17,7 @@ namespace Isekai
             enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", false);
             enemyManager.navMeshAgent.speed = 5.6f;
             enemyManager.navMeshAgent.SetDestination(enemyManager.currentTarget.transform.position);
-            if (enemyManager.DistanceToEnemy() <= enemyManager.combatStanceStateRange && HasLineOfSight(enemyManager))
+            if (enemyManager.DistanceToEnemy() <= enemyManager.combatStanceStateRange && enemyManager.HasLineOfSight(enemyManager.transform))
             {
                 if(knightCombatStanceState != null)
                 {
@@ -38,25 +38,6 @@ namespace Isekai
             else
             {
                 return this;
-            }
-        }
-        public bool HasLineOfSight(EnemyManager enemyManager)
-        {
-            if(Physics.Linecast(enemyManager.transform.position, enemyManager.currentTarget.transform.position, out hit))
-            {
-                if (hit.transform.gameObject.tag == "Player")
-                {
-                    return true;
-                }
-                else
-                {
-
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
             }
         }
     }

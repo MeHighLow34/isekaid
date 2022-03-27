@@ -25,6 +25,10 @@ namespace Isekai
         public float timeSinceLastSawPlayer;
         public float dwellTime;
         public float waypointTolerance;
+        [Header("Enemies")]
+        public string enemyOfMine1;
+        public string enemyOfMine2;
+        public string enemyOfMine3;
         [Header("Pursue Target Information")]
         public float combatStanceStateRange;
         [Header("Combat Stance Information")]
@@ -53,6 +57,7 @@ namespace Isekai
         public bool strafeLeft;
         public bool strafeRight;
         public bool hasHitReaction;
+        RaycastHit hit;
         private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
@@ -159,6 +164,38 @@ namespace Isekai
         {
             distance = Vector3.Distance(transform.position, currentTarget.transform.position);
             return distance;
+        }
+
+        public bool HasLineOfSight(Transform rayCastPoint)
+        {
+            if (Physics.Linecast(rayCastPoint.position, currentTarget.transform.position, out hit))
+            {
+                if (hit.transform.gameObject.tag == currentTarget.transform.gameObject.tag)
+                {
+                    return true;
+                }
+                else
+                {
+
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool HitAFriend(Transform rayCastPoint)
+        {
+            if (Physics.Linecast(rayCastPoint.position, currentTarget.transform.position, out hit))
+            {
+                if (hit.transform.gameObject.tag == "Enemy" || hit.transform.gameObject.tag == "EnemyDamagePoint")
+                { 
+                    return true;
+                }
+            }
+            return false;
         }
 
         #region Gizmos

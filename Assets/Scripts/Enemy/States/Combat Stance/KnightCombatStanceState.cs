@@ -17,7 +17,7 @@ namespace Isekai
             enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", true);
             enemyManager.navMeshAgent.speed = 2.4f;
             enemyManager.navMeshAgent.SetDestination(enemyManager.currentTarget.transform.position);
-            if (enemyManager.DistanceToEnemy() <= enemyManager.attackRange && HasLineOfSight(enemyManager))
+            if (enemyManager.DistanceToEnemy() <= enemyManager.attackRange && enemyManager.HasLineOfSight(rayCastPoint))
             {
                 enemyAnimationHandler.enemyAnimator.SetBool("isInteracting",  true);
                 enemyAnimationHandler.enemyAnimator.SetBool("attack", true);
@@ -29,25 +29,6 @@ namespace Isekai
                 return pursueTargetState;
             }
             return this;
-        }
-        public bool HasLineOfSight(EnemyManager enemyManager)
-        {
-            if (Physics.Linecast(rayCastPoint.position, enemyManager.currentTarget.transform.position, out hit))
-            {
-                if (hit.transform.gameObject.tag == enemyManager.currentTarget.gameObject.tag)
-                {
-                    return true;
-                }
-                else
-                {
-
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
         }
     }
 }

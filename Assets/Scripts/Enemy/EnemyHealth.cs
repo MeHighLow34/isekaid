@@ -12,7 +12,7 @@ namespace Isekai
         float maxHealth;
         BaseStats stats;
         Ragdoll ragdoll;
-        EnemyManager manager;
+        public EnemyManager manager;
         [Header("Experience")]
         public Experience experience;
         public float experiencePoints = 10;

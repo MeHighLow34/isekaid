@@ -12,6 +12,9 @@ namespace Isekai
         public int currentWaypointIndex = 0;
         Vector3 nextPosition;
         public float atWayPointTimer = 0;
+        [Header("Parameters")]
+        public float minimumViewAbleAngle = -80f;
+        public float maximumViewAbleAngle = 80f;
 
         public override State Tick(EnemyManager enemyManager, BaseStats enemyStats, EnemyAnimationHandler enemyAnimationHandler)
         {
@@ -51,7 +54,7 @@ namespace Isekai
                     if (characterStats == this.gameObject.transform.GetComponent<BaseStats>()) continue;
                     Vector3 targetDirection = characterStats.transform.position - transform.position;
                     float viewAbleAngle = Vector3.Angle(targetDirection, transform.forward);
-                    if (viewAbleAngle > -50 && viewAbleAngle < 50)
+                    if (viewAbleAngle > minimumViewAbleAngle && viewAbleAngle < maximumViewAbleAngle)
                     {
                         enemyManager.currentTarget = characterStats;
                     }
