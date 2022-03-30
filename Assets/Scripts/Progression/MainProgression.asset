@@ -105,3 +105,19 @@ MonoBehaviour:
       - 35
       - 44
       - 55
+  - characterClass: 5
+    stats:
+    - stat: 0
+      level:
+      - 33
+      - 25
+      - 35
+      - 44
+      - 55
+    - stat: 3
+      level:
+      - 11
+      - 25
+      - 35
+      - 44
+      - 55
