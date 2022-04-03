@@ -34,6 +34,7 @@ namespace Isekai
             }
             if (currentEnemy != null)   // Once we found the enemy in our range and got the closest one
             {
+                ChangingTargetToTower();
                 enemies.Clear();  // Clear the old enemies because new ones are coming
                 // Here we could add code so that turret attacks the one that's attacking it but oh well
                 if(EnemyIsOutOfRange())    // Once the enemy we are locked on is out of range we set it to null and Look for another again
@@ -118,6 +119,11 @@ namespace Isekai
         {
             Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(transform.position, range);
+        }
+
+        public void ChangingTargetToTower()
+        {
+            currentEnemy.GetComponent<EnemyManager>().currentTarget = GetComponent<BaseStats>();
         }
     }
 }

@@ -26,9 +26,7 @@ namespace Isekai
         public float dwellTime;
         public float waypointTolerance;
         [Header("Enemies")]
-        public string enemyOfMine1;
-        public string enemyOfMine2;
-        public string enemyOfMine3;
+        public string enemyOfMine;
         [Header("Pursue Target Information")]
         public float combatStanceStateRange;
         [Header("Combat Stance Information")]
@@ -58,14 +56,19 @@ namespace Isekai
         public bool strafeRight;
         public bool hasHitReaction;
         RaycastHit hit;
+        [Header("BEHAVIOUR")]
+        public bool Ally;
+        public PatrolState resetState;
         private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
             enemyAnimationHandler = GetComponent<EnemyAnimationHandler>();  
         }
+        
         private void Update()
         {
             CheckIfDead();
+            CheckIfOpponentIsDead();
             VelocityEquator();
         }
         private void  FixedUpdate()
@@ -145,14 +148,29 @@ namespace Isekai
         {
             enemyAnimationHandler.enemyAnimator.SetBool("canDoCombo", true);
         }
+        #endregion
         private void CheckIfDead()
         {
             if(isDead)
             {
                 GetComponent<Ragdoll>().state = true; // If we die we turn on ragDoll
             }
+            return;
         }
-        #endregion
+        
+        private void CheckIfOpponentIsDead()
+        {
+            if (currentTarget == null) return;
+            if(currentTarget.GetComponent<EnemyManager>().isDead == true)
+            {
+                currentTarget = null;
+                distance = 0;
+                enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", false);
+                enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", false);
+                SwitchToNextState(resetState);
+            }
+        }
+
         public void FaceTarget()
         {
             Vector3 direction = currentTarget.transform.position - transform.position;
@@ -168,21 +186,43 @@ namespace Isekai
 
         public bool HasLineOfSight(Transform rayCastPoint)
         {
-            if (Physics.Linecast(rayCastPoint.position, currentTarget.transform.position, out hit))
+            if (Ally == false)   // If it isn't an ally then it attack player
             {
-                if (hit.transform.gameObject.tag == currentTarget.transform.gameObject.tag)
+                if (Physics.Linecast(rayCastPoint.position, currentTarget.transform.position, out hit))
                 {
-                    return true;
+                    if (hit.transform.gameObject.tag == currentTarget.transform.gameObject.tag)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+
+                        return false;
+                    }
                 }
                 else
                 {
-
                     return false;
                 }
             }
-            else
+            else // If it is an ally then it attacks enemy
             {
-                return false;
+                if (Physics.Linecast(rayCastPoint.position, currentTarget.transform.position, out hit))
+                {
+                    if (hit.transform.parent.gameObject.tag == currentTarget.transform.gameObject.tag && hit.transform.gameObject != this.gameObject)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
 
@@ -198,6 +238,11 @@ namespace Isekai
             return false;
         }
 
+
+        public void SwitchTarget(BaseStats newTarget)
+        {
+            currentTarget = newTarget;
+        }
         #region Gizmos
 
         private void OnDrawGizmosSelected()

@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147513621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 147513622}
+  - component: {fileID: 147513623}
+  m_Layer: 20
+  m_Name: CharacterCollisionBlocker
+  m_TagString: EnemyDamagePoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &147513622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147513621}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7168804563393718147}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &147513623
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147513621}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.3756433, y: 6.1334887, z: 6.2369432}
+  m_Center: {x: -0.7935985, y: 2.5667288, z: -1.2467086}
 --- !u!1 &419124908
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,9 +834,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7168804563393718147}
   - component: {fileID: 3058349858273499876}
+  - component: {fileID: 767957136}
+  - component: {fileID: 767957137}
   m_Layer: 0
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -812,6 +858,7 @@ Transform:
   - {fileID: 749073065042508680}
   - {fileID: 7516966491163234435}
   - {fileID: 1875739451}
+  - {fileID: 147513622}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -1233.454, z: 0}
@@ -837,6 +884,42 @@ MonoBehaviour:
   currentEnemy: {fileID: 0}
   bulletSpawnPoint: {fileID: 1517366217}
   projectile: {fileID: 1303578733365348412, guid: 7a2d5c08c64104243a59d298104ebe54, type: 3}
+--- !u!114 &767957136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7509582401618083129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11032f94a4ed02646b2b335bae200a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  manager: {fileID: 0}
+  experience: {fileID: 0}
+  experiencePoints: 10
+  floatingText: {fileID: 0}
+  floatingTextSpawnPosition: {fileID: 0}
+  canvas: {fileID: 0}
+  hearth: {fileID: 0}
+--- !u!114 &767957137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7509582401618083129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ead863529322246a2c6c95d579ff43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  characterClass: 6
+  progression: {fileID: 11400000, guid: 9ce57e0c66d0e3845be797c886691f79, type: 2}
+  experience: {fileID: 0}
 --- !u!1 &8032855162055258636
 GameObject:
   m_ObjectHideFlags: 0

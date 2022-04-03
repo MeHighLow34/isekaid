@@ -98,5 +98,17 @@ namespace Isekai
         {
             knightAttackState.followsTarget = true;
         }
+
+        // Skeleton
+
+        public void EnableSkeletonHand()
+        {
+            enemyColliderDisabler.skeletonHandColliderState = true;
+        }
+
+        public void DisableSkeletonHand()
+        {
+            enemyColliderDisabler.skeletonHandColliderState = false;
+        }
     }
 }

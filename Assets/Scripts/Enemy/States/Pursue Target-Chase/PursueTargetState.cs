@@ -10,6 +10,7 @@ namespace Isekai
         public MageCombatStanceState mageCombatStanceState;
         public ArcherCombatStanceState archerCombatStanceState;
         public CombatStanceState combatStanceState;
+        public Transform rayCastPosition;
         RaycastHit hit;
 
         public override State Tick(EnemyManager enemyManager, BaseStats enemyStats, EnemyAnimationHandler enemyAnimationHandler)
@@ -17,7 +18,9 @@ namespace Isekai
             enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", false);
             enemyManager.navMeshAgent.speed = 5.6f;
             enemyManager.navMeshAgent.SetDestination(enemyManager.currentTarget.transform.position);
-            if (enemyManager.DistanceToEnemy() <= enemyManager.combatStanceStateRange && enemyManager.HasLineOfSight(enemyManager.transform))
+          //  enemyManager.FaceTarget();
+        //    print(enemyManager.HasLineOfSight(enemyManager.transform));
+            if (enemyManager.DistanceToEnemy() <= enemyManager.combatStanceStateRange && enemyManager.HasLineOfSight(rayCastPosition))
             {
                 if(knightCombatStanceState != null)
                 {
@@ -33,7 +36,7 @@ namespace Isekai
                 {
                     return archerCombatStanceState;
                 }
-           
+
                 return combatStanceState;
             }
             else

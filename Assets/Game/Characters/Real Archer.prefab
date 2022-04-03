@@ -404,6 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0d8f54fcd9ae974a848767de8e3ad37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knightCombatStanceState: {fileID: 0}
   mageCombatStanceState: {fileID: 0}
   archerCombatStanceState: {fileID: 2050565026}
   combatStanceState: {fileID: 0}
@@ -1111,6 +1112,8 @@ MonoBehaviour:
   patrolPath: {fileID: 0}
   currentWaypointIndex: 0
   atWayPointTimer: 0
+  minimumViewAbleAngle: -80
+  maximumViewAbleAngle: 80
 --- !u!1 &1431506425394612621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,6 +1538,7 @@ MonoBehaviour:
   level: 1
   characterClass: 2
   progression: {fileID: 11400000, guid: 9ce57e0c66d0e3845be797c886691f79, type: 2}
+  experience: {fileID: 0}
 --- !u!114 &1431506423713299607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1565,11 +1569,16 @@ MonoBehaviour:
   enemyRb: {fileID: 1431506423713299611}
   navMeshAgent: {fileID: 1431506423713299609}
   attack1: {fileID: 11400000, guid: 8a4097c5511ed234f94e258b30ccf6c8, type: 2}
+  knightAttack1: {fileID: 0}
+  knightAttack2: {fileID: 0}
   rotationDelay: 5
   detectionRadius: 10
   timeSinceLastSawPlayer: 0
   dwellTime: 5
   waypointTolerance: 2
+  enemyOfMine1: Player
+  enemyOfMine2: 
+  enemyOfMine3: 
   combatStanceStateRange: 15
   attackRange: 25
   recoveryTime: 2
@@ -1612,6 +1621,7 @@ MonoBehaviour:
   pushBackForce: 0
   pushBackVecto: {x: 0, y: 0, z: 0}
   pushBackRange: 0
+  knightAttackState: {fileID: 0}
 --- !u!114 &8194495854155823057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1625,6 +1635,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+  manager: {fileID: 0}
+  experience: {fileID: 0}
+  experiencePoints: 10
   floatingText: {fileID: 0}
   floatingTextSpawnPosition: {fileID: 0}
   canvas: {fileID: 1309760043}

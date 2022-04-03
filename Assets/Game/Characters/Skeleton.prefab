@@ -49,6 +49,7 @@ MonoBehaviour:
   atWayPointTimer: 0
   minimumViewAbleAngle: -80
   maximumViewAbleAngle: 80
+  ignoreOurselves: {fileID: 6566929834933390567}
 --- !u!1 &385786144
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +413,7 @@ MonoBehaviour:
   mageCombatStanceState: {fileID: 0}
   archerCombatStanceState: {fileID: 0}
   combatStanceState: {fileID: 0}
+  rayCastPosition: {fileID: 935871137}
   skeletonCombatStanceState: {fileID: 404991003}
   rayCastPosition: {fileID: 935871137}
 --- !u!1 &935871136
@@ -1142,6 +1144,8 @@ GameObject:
   - component: {fileID: 6294022908509778576}
   - component: {fileID: 6294022908509778577}
   - component: {fileID: 6294022908509778591}
+  - component: {fileID: 1050174853}
+  - component: {fileID: 1050174854}
   m_Layer: 0
   m_Name: lowerarm_r
   m_TagString: Untagged
@@ -1206,7 +1210,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000002477318, y: 0.22539838, z: 0.00000029173685}
+  m_ConnectedAnchor: {x: 0.00000023143366, y: 0.2253979, z: 0.000000050873506}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1240,6 +1244,34 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!65 &1050174853
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698620697920566498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09078072, y: 0.3469491, z: 0.1188977}
+  m_Center: {x: -0.003547766, y: 0.22033465, z: 0.011308932}
+--- !u!114 &1050174854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698620697920566498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8280b198846b8564dbd3279d72d2e64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats: {fileID: 6566929834933390567}
+  enemyManager: {fileID: 919132149062051718}
+  damage: 0
 --- !u!1 &1875469711150698383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,7 +1530,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000021908846, y: 0.14664246, z: 0.028951105}
+  m_ConnectedAnchor: {x: 0.00000051293057, y: 0.14664266, z: 0.02895054}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -1918,7 +1950,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.10266794, y: -0.0013606907, z: -0.01118312}
+  m_ConnectedAnchor: {x: -0.102668315, y: -0.0013604746, z: -0.011183739}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2152,7 +2184,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.000000112690195, y: 0.3219856, z: -0.000000022351824}
+  m_ConnectedAnchor: {x: 0.00000018905875, y: 0.32198566, z: -0.00000061840046}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2292,7 +2324,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0000000032596286, y: 0.22539851, z: -0.00000019581054}
+  m_ConnectedAnchor: {x: -0.00000012060626, y: 0.22539851, z: 0.0000007438938}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2402,7 +2434,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000028358792, y: 0.32198533, z: 0.00000031292487}
+  m_ConnectedAnchor: {x: -0.00000020489111, y: 0.32198533, z: 0.0000002905731}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2760,7 +2792,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.17920494, y: 0.2743506, z: 0.08404491}
+  m_ConnectedAnchor: {x: -0.17920515, y: 0.2743506, z: 0.08404503}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3279,7 +3311,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.17920479, y: 0.27435064, z: 0.08404441}
+  m_ConnectedAnchor: {x: 0.17920509, y: 0.27435067, z: 0.084044315}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3388,7 +3420,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000015046078, y: 0.42838293, z: 0.13764371}
+  m_ConnectedAnchor: {x: -0.00000018026313, y: 0.4283829, z: 0.13764407}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3529,7 +3561,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.10266805, y: -0.0013603228, z: -0.01118388}
+  m_ConnectedAnchor: {x: 0.10266786, y: -0.0013603815, z: -0.011183716}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -3831,6 +3863,8 @@ GameObject:
   - component: {fileID: 919132149062051718}
   - component: {fileID: 982511906}
   - component: {fileID: 982511907}
+  - component: {fileID: 1198237877}
+  - component: {fileID: 1572101351}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Enemy
@@ -4016,13 +4050,11 @@ MonoBehaviour:
   knightAttack1: {fileID: 0}
   knightAttack2: {fileID: 0}
   rotationDelay: 5
-  detectionRadius: 10
+  detectionRadius: 25
   timeSinceLastSawPlayer: 0
   dwellTime: 5
   waypointTolerance: 2
-  enemyOfMine1: Player
-  enemyOfMine2: 
-  enemyOfMine3: 
+  enemyOfMine: 
   combatStanceStateRange: 5
   attackRange: 1.75
   recoveryTime: 2
@@ -4045,6 +4077,8 @@ MonoBehaviour:
   strafeLeft: 0
   strafeRight: 0
   hasHitReaction: 1
+  Ally: 1
+  resetState: {fileID: 192610246}
 --- !u!114 &982511906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4079,13 +4113,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  manager: {fileID: 0}
+  manager: {fileID: 919132149062051718}
   experience: {fileID: 0}
   experiencePoints: 10
   floatingText: {fileID: 0}
   floatingTextSpawnPosition: {fileID: 0}
   canvas: {fileID: 708398829}
   hearth: {fileID: 0}
+--- !u!114 &1198237877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6600506485378699577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0421b106de1d2e64bb11213b429ff26a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHandCollider: {fileID: 0}
+  rightHandCollider: {fileID: 0}
+  punkHeartCollider: {fileID: 0}
+  swordCollider: {fileID: 0}
+  skeletonHandCollider: {fileID: 1050174853}
+  leftHandColliderState: 0
+  rightHandColliderState: 0
+  punkHeartColliderState: 0
+  knightSwordCollider: 0
+  skeletonHandColliderState: 0
+--- !u!114 &1572101351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6600506485378699577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d1539d89680e641a2acb13792c51ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6653533197924449948
 GameObject:
   m_ObjectHideFlags: 0

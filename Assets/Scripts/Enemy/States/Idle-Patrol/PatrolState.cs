@@ -7,6 +7,8 @@ namespace Isekai
 {
     public class PatrolState : State
     {
+
+        
         public PursueTargetState pursueTargetState;
         [SerializeField] PatrolPath patrolPath;
         public int currentWaypointIndex = 0;
@@ -15,9 +17,11 @@ namespace Isekai
         [Header("Parameters")]
         public float minimumViewAbleAngle = -80f;
         public float maximumViewAbleAngle = 80f;
-
+        [Header("DEBUG")]
+        public BaseStats ignoreOurselves;
         public override State Tick(EnemyManager enemyManager, BaseStats enemyStats, EnemyAnimationHandler enemyAnimationHandler)
         {
+            DetermineEnemy(enemyManager);
             CheckForEnemy(enemyManager);
             enemyManager.navMeshAgent.speed = 2.4f;
             if(patrolPath != null)
@@ -42,6 +46,18 @@ namespace Isekai
             return this;
         }
 
+        private void DetermineEnemy(EnemyManager enemyManager)
+        {
+            if(enemyManager.Ally == true)
+            {
+                enemyManager.enemyOfMine = "Enemy";
+            }
+            else
+            {
+                enemyManager.enemyOfMine = "Player";
+            }
+
+        }
         private void CheckForEnemy(EnemyManager enemyManager)
         {
             Collider[] colliders = Physics.OverlapSphere(transform.position, enemyManager.detectionRadius, enemyManager.detectionLayer);
@@ -50,8 +66,9 @@ namespace Isekai
                 BaseStats characterStats = colliders[i].transform.GetComponent<BaseStats>();
                 if (characterStats != null)
                 {
-                    if (characterStats.gameObject.tag != "Player") continue;  // We only recognize player as  a valid enemy at this point in development...
-                    if (characterStats == this.gameObject.transform.GetComponent<BaseStats>()) continue;
+                    if (characterStats.gameObject.tag != enemyManager.enemyOfMine) continue;  // We only recognize player as  a valid enemy at this point in development...
+                    if (characterStats == ignoreOurselves) continue; // ignore ourselves
+                   
                     Vector3 targetDirection = characterStats.transform.position - transform.position;
                     float viewAbleAngle = Vector3.Angle(targetDirection, transform.forward);
                     if (viewAbleAngle > minimumViewAbleAngle && viewAbleAngle < maximumViewAbleAngle)

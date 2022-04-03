@@ -1,4 +1,4 @@
 public enum CharacterClass
 {
-    Player, Soldier, Archer, Mage, Knight, Skeleton
+    Player, Soldier, Archer, Mage, Knight, Skeleton, Turret
 }

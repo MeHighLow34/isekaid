@@ -23,24 +23,5 @@ namespace Isekai
 
             return this;
         }
-        public bool HasLineOfSight(EnemyManager enemyManager)
-        {
-            if (Physics.Linecast(enemyManager.transform.position, enemyManager.currentTarget.transform.position, out hit))
-            {
-                if (hit.transform.gameObject.tag == "Player")
-                {
-                    return true;
-                }
-                else
-                {
-
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
     }
 }

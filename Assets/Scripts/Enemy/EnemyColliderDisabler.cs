@@ -13,11 +13,14 @@ namespace Isekai
         [SerializeField] public BoxCollider punkHeartCollider;
         [Header("Colliders-Knight")]
         [SerializeField] BoxCollider swordCollider;
+        [Header("Skeleton")]
+        [SerializeField] BoxCollider skeletonHandCollider;
         [Header("Bools")]
         public bool leftHandColliderState;
         public bool rightHandColliderState;
         public bool punkHeartColliderState;
         public bool knightSwordCollider;
+        public bool skeletonHandColliderState;
 
         private void LateUpdate()
         {
@@ -37,7 +40,10 @@ namespace Isekai
             {
                 swordCollider.enabled = knightSwordCollider;
             }
-            
+            if(skeletonHandCollider != null)
+            {
+                skeletonHandCollider.enabled = skeletonHandColliderState;
+            }
         }
     }
 }

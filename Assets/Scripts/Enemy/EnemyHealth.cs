@@ -53,6 +53,8 @@ namespace Isekai
             health -= damage;
             if (health <= 0)
             {
+                print("Im dead" + gameObject.name);
+                manager.isDead = true;
                 HandleDeath();
             }
         }
@@ -69,11 +71,11 @@ namespace Isekai
             ragdoll.disabled = false;
             ragdoll.state = true;
             manager.isDead = true;
+            manager.enemyAnimationHandler.enemyAnimator.enabled = false;
             manager.enabled = false;
             canvas.SetActive(false);
             if(hearth != null)
             {
-              //  Instantiate(heartExplosionParticle, hearth.transform.position, Quaternion.identity);
                 hearth.SetActive(false);
             }
         }
