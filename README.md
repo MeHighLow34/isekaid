@@ -1,0 +1,3 @@
+# isekaid
+Isekai'd is an RPG Action Adventure Indie Game
+It's going to be on Steam and it will be COMPLETELY FREE since we are doing this just so we become game developers...
