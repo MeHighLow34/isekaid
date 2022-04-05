@@ -10,20 +10,26 @@ namespace Isekai
         EnemyManager enemyManager;
         Animator animator;
         Ragdoll ragdoll;
-
+        public GameObject userInterface;
+        public BoxCollider[] colliders;
         private void Awake()
         {
             ragdoll = GetComponent<Ragdoll>();
             enemyManager = GetComponent<EnemyManager>();
-            animator = GetComponent<Animator>();    
+            animator = GetComponent<Animator>();
         }
         private void Update()
         {
             if(enemyManager.isDead)
             {
-           //     animator.enabled = false;
                 ragdoll.disabled = false;
                 animator.SetBool("isInteracting", false);
+                userInterface.SetActive(false);
+                foreach (var collider in colliders)
+                {
+                    if (collider == null) return;
+                    collider.enabled = false;
+                }
             }
         }
     }

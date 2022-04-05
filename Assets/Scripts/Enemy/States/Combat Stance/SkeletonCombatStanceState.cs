@@ -6,7 +6,7 @@ namespace Isekai
 {
     public class SkeletonCombatStanceState : State
     {
-        public Transform rayCastPoint;
+        //public Transform rayCastPoint;
         public PursueTargetState pursueTargetState;
         public SkeletonAttackState skeletonAttackState;
         public override State Tick(EnemyManager enemyManager, BaseStats enemyStats, EnemyAnimationHandler enemyAnimationHandler)
@@ -16,7 +16,7 @@ namespace Isekai
             enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", true);
             enemyManager.navMeshAgent.speed = 2.4f;
             enemyManager.navMeshAgent.SetDestination(enemyManager.currentTarget.transform.position);
-            if (enemyManager.DistanceToEnemy() <= enemyManager.attackRange && enemyManager.HasLineOfSight(rayCastPoint))
+            if (enemyManager.DistanceToEnemy() <= enemyManager.attackRange && enemyManager.HasLineOfSight(enemyManager.rayCastPosition))
             {
                 enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", true);
                 enemyAnimationHandler.enemyAnimator.SetBool("attack", true);

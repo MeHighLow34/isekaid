@@ -662,7 +662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c36a995fd712ef42804d10edd3ee50a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayCastPoint: {fileID: 2062000618}
   knightAttackState: {fileID: 445747598}
   pursueTargetState: {fileID: 1940159909}
 --- !u!1 &1747567873
@@ -697,8 +696,8 @@ RectTransform:
   m_Father: {fileID: 435942889}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.20700002, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.00019836426}
   m_SizeDelta: {x: 0, y: -87.249}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -787,7 +786,6 @@ MonoBehaviour:
   mageCombatStanceState: {fileID: 0}
   archerCombatStanceState: {fileID: 0}
   combatStanceState: {fileID: 0}
-  rayCastPosition: {fileID: 2062000618}
 --- !u!1 &1992030784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,7 +1982,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000173226, y: 0.48433504, z: 0.0000007348135}
+  m_ConnectedAnchor: {x: -0.00000016577542, y: 0.48433504, z: 0.00000072736293}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2075,7 +2073,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4134534011302773240}
-  m_LocalRotation: {x: 0.0013455808, y: 0.009641136, z: 0.99985087, w: -0.014265042}
+  m_LocalRotation: {x: 0.0013455808, y: 0.0096411435, z: 0.99985087, w: -0.014265049}
   m_LocalPosition: {x: 0.08781862, y: -0.060124587, z: -0.0076971054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3227,13 +3225,14 @@ GameObject:
   - component: {fileID: 919132148710820237}
   - component: {fileID: 1100415021}
   - component: {fileID: 875163505}
+  - component: {fileID: 97670315}
   m_Layer: 19
   m_Name: Knight
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7764398697677017752
 Transform:
   m_ObjectHideFlags: 0
@@ -3412,6 +3411,7 @@ MonoBehaviour:
   hasHitReaction: 1
   Ally: 1
   resetState: {fileID: 400712132}
+  rayCastPosition: {fileID: 2062000618}
 --- !u!114 &9178038142905728183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3504,6 +3504,21 @@ MonoBehaviour:
   punkHeartColliderState: 0
   knightSwordCollider: 0
   skeletonHandColliderState: 0
+--- !u!114 &97670315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6956794609846126626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d1539d89680e641a2acb13792c51ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userInterface: {fileID: 874011932}
+  colliders:
+  - {fileID: 4194815779455279098}
 --- !u!1 &7071910349499145222
 GameObject:
   m_ObjectHideFlags: 0
@@ -4198,6 +4213,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79d1401cd4e6cbf4ab1383a0a3218a2e, type: 3}
+--- !u!65 &4194815779455279098 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8861588999228108973, guid: 79d1401cd4e6cbf4ab1383a0a3218a2e, type: 3}
+  m_PrefabInstance: {fileID: 4669188859708485463}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2784983923441595684 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7379722591542073971, guid: 79d1401cd4e6cbf4ab1383a0a3218a2e, type: 3}
@@ -4206,11 +4226,6 @@ GameObject:
 --- !u!4 &2786414868570415248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7378900637349777351, guid: 79d1401cd4e6cbf4ab1383a0a3218a2e, type: 3}
-  m_PrefabInstance: {fileID: 4669188859708485463}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &4194815779455279098 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 8861588999228108973, guid: 79d1401cd4e6cbf4ab1383a0a3218a2e, type: 3}
   m_PrefabInstance: {fileID: 4669188859708485463}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &150809560

@@ -7,7 +7,7 @@ namespace Isekai
 {
     public class MageCombatStanceState : State
     {
-        public Transform rayCastPoint;
+        //public Transform rayCastPoint;
         RaycastHit hit;
         public PursueTargetState pursueTargetState;
         public MageAttackState mageAttackState;
@@ -18,11 +18,11 @@ namespace Isekai
             enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", true);
             enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", true);
             enemyManager.FaceTarget();
-            if (enemyManager.HitAFriend(rayCastPoint))
+            if (enemyManager.HitAFriend(enemyManager.rayCastPosition) && enemyManager.Ally == false)
             {
                 return this;
             }
-            if (enemyManager.HasLineOfSight(rayCastPoint) == false)
+            if (enemyManager.HasLineOfSight(enemyManager.rayCastPosition) == false)
             {
                 enemyAnimationHandler.enemyAnimator.SetBool("isInteracting", false);
                 enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", false);

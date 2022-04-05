@@ -6,7 +6,7 @@ namespace Isekai
 {
     public class KnightCombatStanceState : State
     {
-        public Transform rayCastPoint;
+        //public Transform rayCastPoint;
         RaycastHit hit;
         public KnightAttackState knightAttackState;
         public PursueTargetState pursueTargetState;
@@ -17,7 +17,7 @@ namespace Isekai
             enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", true);
             enemyManager.navMeshAgent.speed = 2.4f;
             enemyManager.navMeshAgent.SetDestination(enemyManager.currentTarget.transform.position);
-            if (enemyManager.DistanceToEnemy() <= enemyManager.attackRange && enemyManager.HasLineOfSight(rayCastPoint))
+            if (enemyManager.DistanceToEnemy() <= enemyManager.attackRange && enemyManager.HasLineOfSight(enemyManager.rayCastPosition))
             {
                 enemyAnimationHandler.enemyAnimator.SetBool("isInteracting",  true);
                 enemyAnimationHandler.enemyAnimator.SetBool("attack", true);

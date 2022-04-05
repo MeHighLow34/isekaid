@@ -59,6 +59,7 @@ namespace Isekai
         [Header("BEHAVIOUR")]
         public bool Ally;
         public PatrolState resetState;
+        public Transform rayCastPosition;
         private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
@@ -68,7 +69,10 @@ namespace Isekai
         private void Update()
         {
             CheckIfDead();
-            CheckIfOpponentIsDead();
+            if (Ally == true && currentTarget != null)
+            {
+                CheckIfOpponentIsDead();
+            }
             VelocityEquator();
         }
         private void  FixedUpdate()
@@ -158,9 +162,8 @@ namespace Isekai
             return;
         }
         
-        private void CheckIfOpponentIsDead()
+        private void CheckIfOpponentIsDead()  // This is only in Ally Mode...Gawd AI is Hard
         {
-            if (currentTarget == null) return;
             if(currentTarget.GetComponent<EnemyManager>().isDead == true)
             {
                 currentTarget = null;

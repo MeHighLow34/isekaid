@@ -38,7 +38,13 @@ namespace Isekai
 
             experiencePoints = stats.GetStat(Stat.ExperienceToGive)/3;
         }
-
+        private void Update()
+        {
+            if(health <= 0)
+            {
+                HandleDeath();
+            }
+        }
         public float GetDecimal()
         {
             return health / maxHealth;

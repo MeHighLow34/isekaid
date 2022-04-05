@@ -49,6 +49,7 @@ MonoBehaviour:
   atWayPointTimer: 0
   minimumViewAbleAngle: -80
   maximumViewAbleAngle: 80
+  ignoreOurselves: {fileID: 0}
 --- !u!1 &471462601
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,7 +574,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -1.1641516e-10, y: 0.004559106, z: -0.000000004976752}
+  m_ConnectedAnchor: {x: -9.313213e-10, y: 0.0045591057, z: -2.619343e-10}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -681,7 +682,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00013822595, y: 0.0036654887, z: 0.0005078807}
+  m_ConnectedAnchor: {x: -0.0001382241, y: 0.0036654887, z: 0.0005078807}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -791,7 +792,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 4.947647e-10, y: 0.0045591057, z: -0.0000000016007098}
+  m_ConnectedAnchor: {x: 0.0000000018335397, y: 0.0045591057, z: -0.0000000039581187}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -950,8 +951,8 @@ RectTransform:
   m_Father: {fileID: 243977615360834025}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.20700002, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.00019836426}
   m_SizeDelta: {x: 0, y: -87.249}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1283,7 +1284,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -7.682832e-10, y: 0.0026775955, z: 0.00031762617}
+  m_ConnectedAnchor: {x: -6.979005e-11, y: 0.0026775948, z: 0.00031763106}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2197,7 +2198,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0016490136, y: 0.0024151101, z: 0.00030173}
+  m_ConnectedAnchor: {x: 0.0016490136, y: 0.0024151115, z: 0.00030172244}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2573,7 +2574,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0000000023865143, y: 0.0019373585, z: 0.000000002910383}
+  m_ConnectedAnchor: {x: -0.0000000036379793, y: 0.0019373614, z: -0.00000000273576}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2633,6 +2634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats: {fileID: 6661396566197671092}
+  enemyManager: {fileID: 0}
   damage: 0
 --- !u!1 &4638427826892016088
 GameObject:
@@ -2957,7 +2959,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.000000003987225, y: 0.0019373589, z: -0.0000000013387763}
+  m_ConnectedAnchor: {x: 0.0000000030559026, y: 0.0019373597, z: 0.0000000015133994}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -3017,6 +3019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats: {fileID: 6661396566197671092}
+  enemyManager: {fileID: 0}
   damage: 0
 --- !u!1 &5399463853433396394
 GameObject:
@@ -3971,7 +3974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7180513665884874627
 Transform:
   m_ObjectHideFlags: 0
@@ -4147,9 +4150,7 @@ MonoBehaviour:
   timeSinceLastSawPlayer: 0
   dwellTime: 5
   waypointTolerance: 2
-  enemyOfMine1: Player
-  enemyOfMine2: 
-  enemyOfMine3: 
+  enemyOfMine: 
   combatStanceStateRange: 5
   attackRange: 2
   recoveryTime: 2
@@ -4172,6 +4173,9 @@ MonoBehaviour:
   strafeLeft: 0
   strafeRight: 0
   hasHitReaction: 0
+  Ally: 0
+  resetState: {fileID: 1894629421}
+  rayCastPosition: {fileID: 0}
 --- !u!114 &919132148955806606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4236,10 +4240,12 @@ MonoBehaviour:
   rightHandCollider: {fileID: 142850264}
   punkHeartCollider: {fileID: 658026812}
   swordCollider: {fileID: 0}
+  skeletonHandCollider: {fileID: 0}
   leftHandColliderState: 0
   rightHandColliderState: 0
   punkHeartColliderState: 1
   knightSwordCollider: 0
+  skeletonHandColliderState: 0
 --- !u!1 &7701289390657184286
 GameObject:
   m_ObjectHideFlags: 0
@@ -4347,7 +4353,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00086732884, y: 0.00025212392, z: 0.00043213202}
+  m_ConnectedAnchor: {x: -0.000867332, y: 0.00025212584, z: 0.00043212474}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -4610,7 +4616,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0008673328, y: 0.0002521244, z: 0.00043212838}
+  m_ConnectedAnchor: {x: 0.0008673313, y: 0.00025212584, z: 0.00043212433}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -4785,7 +4791,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0016490119, y: 0.0024151148, z: 0.00030172936}
+  m_ConnectedAnchor: {x: -0.0016490142, y: 0.0024151148, z: 0.00030172477}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
