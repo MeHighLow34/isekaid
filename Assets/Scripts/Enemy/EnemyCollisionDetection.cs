@@ -19,6 +19,7 @@ namespace Isekai
         }
         private void OnTriggerEnter(Collider other)
         {
+            if (enemyManager.isDead) return;
             if (enemyManager.Ally == false)
             {
                 if (other.gameObject.tag == "Player" && other.gameObject != enemyManager.gameObject)

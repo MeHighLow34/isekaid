@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 
 
 namespace Isekai
@@ -13,6 +13,7 @@ namespace Isekai
         public CharacterClass characterClass;
         public Progression progression;
         public Experience experience;
+        public static Action onLevelUp;
         private void Awake()
         {
             experience = GetComponent<Experience>();
@@ -28,7 +29,9 @@ namespace Isekai
             if(experience.CurrentExperience() > GetStat(Stat.ExperienceToLevelUp))
             {
                 level++;
-                print("Leveled Up");
+                onLevelUp.Invoke();
+                var currentExp = experience.CurrentExperience();    
+                currentExp = experience.CurrentExperience();
             }
         }
     }

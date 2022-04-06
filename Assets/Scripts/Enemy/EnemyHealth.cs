@@ -24,6 +24,7 @@ namespace Isekai
         [Header("Punk - Specific")]
      //   public GameObject heartExplosionParticle;
         public GameObject hearth;
+        bool gaveExperience;
         private void Awake()
         {
             experience = FindObjectOfType<Experience>();
@@ -72,7 +73,7 @@ namespace Isekai
 
         private void HandleDeath()
         {
-            experience.GainExp(experiencePoints);
+            AwardExpToPlayer();
             health = 0;
             ragdoll.disabled = false;
             ragdoll.state = true;
@@ -85,5 +86,17 @@ namespace Isekai
                 hearth.SetActive(false);
             }
         }
+
+
+        private void AwardExpToPlayer()
+        {
+            if (gaveExperience == false)
+            {
+                experience.GainExp(experiencePoints);
+                gaveExperience = true;
+            }
+        }
     }
+
+
 }
