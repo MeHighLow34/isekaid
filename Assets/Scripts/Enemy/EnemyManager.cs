@@ -96,6 +96,8 @@ namespace Isekai
                 }
             }
         }
+
+
         private void RootAnimationChecker()
         {
             if (isInteracting)  // Apply Root Motion

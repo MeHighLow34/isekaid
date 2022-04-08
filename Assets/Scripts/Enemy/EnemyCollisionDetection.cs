@@ -34,6 +34,14 @@ namespace Isekai
                 {
                     EnemyHealth enemyHealth = other.GetComponentInParent<EnemyHealth>();
                     if(enemyHealth == null) enemyHealth = other.GetComponent<EnemyHealth>();
+                    if (enemyHealth == null) return;
+                    if (enemyHealth == enemyManager.GetComponent<EnemyHealth>()) return;
+                    var enemiesManager = enemyHealth.gameObject.GetComponent<EnemyManager>();
+                    print(enemiesManager.currentTarget + baseStats.gameObject.name);
+                    if(enemiesManager.currentTarget == null || enemiesManager.currentTarget == enemyHealth.GetComponent<BaseStats>())
+                    {
+                        enemiesManager.currentTarget = baseStats;
+                    }
                     enemyHealth.TakeDamage(damage); 
                 }
             }

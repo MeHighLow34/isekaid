@@ -17,6 +17,7 @@ namespace Isekai
             enemyAnimationHandler.enemyAnimator.SetBool("combatIdle", true);
             enemyManager.navMeshAgent.speed = 2.4f;
             enemyManager.navMeshAgent.SetDestination(enemyManager.currentTarget.transform.position);
+            print(enemyManager.HasLineOfSight(enemyManager.rayCastPosition));
             if (enemyManager.DistanceToEnemy() <= enemyManager.attackRange && enemyManager.HasLineOfSight(enemyManager.rayCastPosition))
             {
                 enemyAnimationHandler.enemyAnimator.SetBool("isInteracting",  true);

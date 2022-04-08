@@ -60,7 +60,7 @@ namespace Isekai
             health -= damage;
             if (health <= 0)
             {
-                print("Im dead" + gameObject.name);
+          //      print("Im dead" + gameObject.name);
                 manager.isDead = true;
                 HandleDeath();
             }

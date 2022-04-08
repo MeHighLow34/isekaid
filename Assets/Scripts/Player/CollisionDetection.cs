@@ -43,6 +43,7 @@ namespace Isekai
                 
                 other.GetComponentInParent<EnemyHealth>().TakeDamage(damage);
                 other.GetComponentInParent<EnemyHealth>().manager.currentTarget = player.transform.GetComponent<BaseStats>();
+                other.GetComponentInParent<EnemyHealth>().manager.Ally = false;
 
                 Instantiate(bloodVFX, other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(transform.position), Quaternion.identity);
                 if (other.GetComponentInParent<EnemyManager>().hasHitReaction)
