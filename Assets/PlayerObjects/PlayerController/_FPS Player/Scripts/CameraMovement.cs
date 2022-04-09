@@ -6,7 +6,8 @@ public class CameraMovement : MonoBehaviour
 {
     Vector2 _mouseAbsolute;
     Vector2 _smoothMouse;
-
+    public bool enableCursor = false;
+    public bool lockCursor = true;
     public GameObject characterBody;
 
     [SerializeField]
@@ -32,8 +33,9 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = enableCursor;
+       // if(lockCursor)
+       // Cursor.lockState = CursorLockMode.Locked;
         // Allow the script to clamp based on a desired target value.
         var targetOrientation = Quaternion.Euler(targetDirection);
         var targetCharacterOrientation = Quaternion.Euler(targetCharacterDirection);

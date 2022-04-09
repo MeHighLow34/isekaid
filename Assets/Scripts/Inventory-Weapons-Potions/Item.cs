@@ -10,5 +10,11 @@ namespace Isekai
     {
         new public string name;
         public Sprite icon = null;
+        public virtual void Use()
+        {
+            Debug.Log("Using " + name);
+        }
     }
+
+    
 }
