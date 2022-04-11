@@ -3,7 +3,27 @@ guid: 586aa516e6a6ef4439e4f8ad3b8f065d
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cev
+    second: {fileID: 2100000, guid: 0813722d948998748b173d8257b926e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hand
+    second: {fileID: 2100000, guid: a3357132a930fb34f8346e4686152d16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mid_sword
+    second: {fileID: 2100000, guid: cd5a2be5018f59444841f7fe052269f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sword
+    second: {fileID: 2100000, guid: 152e2d7dff7f3d64787163131f6227f1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

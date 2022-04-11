@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f4d368be8bac724eb8061da08c54adb, type: 3}
-  m_Name: Testing
+  m_Script: {fileID: 11500000, guid: 437e555c3d77aac4aa2f3255accfd0b9, type: 3}
+  m_Name: Legadonia Sword
   m_EditorClassIdentifier: 
-  name: Cook Book
-  icon: {fileID: 21300000, guid: 7788578edcc370145ae5156b7d9370f9, type: 3}
+  weaponName: Legadonia Sword
+  weaponDescription: Legadonnia Entente Allience
+  weaponPrefab: {fileID: 2590562152124698968, guid: 31b0df1d467669b4f9d8485bec047f36, type: 3}

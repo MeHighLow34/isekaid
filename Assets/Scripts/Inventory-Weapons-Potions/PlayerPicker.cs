@@ -11,6 +11,7 @@ namespace Isekai
         Camera mainCamera;
         RaycastHit hit;
         public float sphereCastRadius = 0.5f;
+        public LayerMask ignoreMe;
         private void Awake()
         {
             mainCamera = Camera.main;
@@ -21,11 +22,12 @@ namespace Isekai
             if(Input.GetKeyDown(KeyCode.J))
             {
                 Ray ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width/2f, Screen.height/2f, 0f));
-                if(Physics.SphereCast(ray, sphereCastRadius,out hit))
+                if(Physics.SphereCast(ray, sphereCastRadius,out hit, ~ignoreMe))
                 {
                     Interactable interactable = hit.transform.gameObject.GetComponent<Interactable>();
                     if(interactable != null)
                     {
+                        
                         interactable.Interact();
                     }
                 }

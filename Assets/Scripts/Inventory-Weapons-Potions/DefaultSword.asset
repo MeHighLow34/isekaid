@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437e555c3d77aac4aa2f3255accfd0b9, type: 3}
+  m_Name: DefaultSword
+  m_EditorClassIdentifier: 
+  weaponName: Default Sword
+  weaponDescription: This sword was stolen from Sketchfab...Please do take care of
+    it since if you don't the Ancient Dragon will come to fuck you up...hehe we do
+    a little trolling hehe hehe
+  weaponPrefab: {fileID: 1037715513984232, guid: 259746fbc59909b4eb14377c46a80363, type: 3}

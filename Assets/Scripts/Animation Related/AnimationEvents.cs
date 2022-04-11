@@ -10,7 +10,10 @@ namespace Isekai
         [Header("Attacking")]
         public BoxCollider weaponBoxCollider;
         public Animator animator;
+        public Transform weaponHolder;
 
+
+       
         private void Awake()
         {
             animator = GetComponent<Animator>();
@@ -18,6 +21,7 @@ namespace Isekai
 
         private void Start()
         {
+            weaponBoxCollider = weaponHolder.GetChild(0).GetComponent<BoxCollider>();
             weaponBoxCollider.enabled = false;
         }
 
