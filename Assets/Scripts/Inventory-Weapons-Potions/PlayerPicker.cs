@@ -12,9 +12,11 @@ namespace Isekai
         RaycastHit hit;
         public float sphereCastRadius = 0.5f;
         public LayerMask ignoreMe;
+        PickUpInfo pickUpInfo;
         private void Awake()
         {
             mainCamera = Camera.main;
+            pickUpInfo = FindObjectOfType<PickUpInfo>();
         }
 
         private void Update()
@@ -27,7 +29,7 @@ namespace Isekai
                     Interactable interactable = hit.transform.gameObject.GetComponent<Interactable>();
                     if(interactable != null)
                     {
-                        
+                        pickUpInfo.DisplayPickUp(interactable.name);
                         interactable.Interact();
                     }
                 }

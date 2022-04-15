@@ -9,8 +9,6 @@ namespace Isekai
     {
         Weapon weapon;
         public Image icon;
-        public Image removeButtonIcon;
-        public Button removeButton;
         WeaponInfo weaponInfo;
 
         private void Awake()
@@ -22,9 +20,7 @@ namespace Isekai
         {
             weapon = newWeapon;
             icon.sprite = weapon.icon;
-            icon.enabled = true;
-            removeButton.interactable = true;
-            removeButtonIcon.enabled = true;    
+            icon.enabled = true; 
         }
 
         public void ClearSlot()
@@ -32,8 +28,7 @@ namespace Isekai
             weapon = null;
             icon.sprite = null;
             icon.enabled=false;
-            removeButtonIcon.enabled=false;
-            removeButton.interactable=false;
+
         }
 
         public void Remove()
@@ -43,6 +38,7 @@ namespace Isekai
 
         public void Use()
         {
+            print("DUDE DISPLAY THIS SHIT" + gameObject.name);
             weaponInfo.Display(weapon);
         }
     }

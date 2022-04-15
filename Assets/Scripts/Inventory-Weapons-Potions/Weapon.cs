@@ -13,7 +13,7 @@ namespace Isekai
         [TextArea]
         public string weaponDescription;
         public GameObject weaponPrefab;
-
+        public GameObject weaponPickUp;
 
 
 

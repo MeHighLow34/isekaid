@@ -355,6 +355,36 @@ CapsuleCollider:
   m_Height: 1.75
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2038827095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2038827096}
+  m_Layer: 19
+  m_Name: Weapon Pick Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2038827096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038827095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.48, z: 1.008}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7085721664118310500}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1908399307047149062
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +786,7 @@ GameObject:
   - component: {fileID: 1391334002}
   - component: {fileID: 811124488}
   - component: {fileID: 811124516}
+  - component: {fileID: 1950271670}
   m_Layer: 19
   m_Name: Player
   m_TagString: Player
@@ -778,6 +809,7 @@ Transform:
   - {fileID: 124621440}
   - {fileID: 1129051294}
   - {fileID: 1860705872}
+  - {fileID: 2038827096}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1246,7 +1278,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc6c3dddde65504fbab0c404adcbd85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereCastRadius: 0.5
+  sphereCastRadius: 0.15
+  ignoreMe:
+    serializedVersion: 2
+    m_Bits: 2147483648
 --- !u!114 &1391334002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1293,6 +1328,21 @@ MonoBehaviour:
   testWeapon: {fileID: 11400000, guid: 4dd603b36384a684eae0a38d68482c81, type: 2}
   currentWeapon: {fileID: 0}
   handTransform: {fileID: 4582337999951510841}
+  weaponSpawn: {fileID: 2038827096}
+--- !u!114 &1950271670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7085721664118310506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fdaf2a47da737438f1fe714240cbef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  space: 20
+  weapons: []
 --- !u!1001 &1447274080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1706,24 +1756,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
---- !u!1 &919132148320869169 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
-  m_PrefabInstance: {fileID: 1447274080}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &5866666020596554737 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
   m_PrefabInstance: {fileID: 1447274080}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2229452826923520812 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2229452827825534284, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
-  m_PrefabInstance: {fileID: 1447274080}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &543450652261400971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
+  m_PrefabInstance: {fileID: 1447274080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &919132148320869169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
+  m_PrefabInstance: {fileID: 1447274080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2229452826923520812 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2229452827825534284, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
   m_PrefabInstance: {fileID: 1447274080}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &12827842

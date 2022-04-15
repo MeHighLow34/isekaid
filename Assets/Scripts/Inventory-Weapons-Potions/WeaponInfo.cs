@@ -31,6 +31,11 @@ namespace Isekai
             weaponManager.EquipWeapon(currentWeapon);
         }
 
-
+        public void Drop()
+        {
+            var instantiedPickUp = Instantiate(currentWeapon.weaponPickUp, weaponManager.weaponSpawn.position, Quaternion.identity);
+            instantiedPickUp.transform.gameObject.name = currentWeapon.name;
+            WeaponInventory.instance.Remove(currentWeapon);
+        }
     }
 }

@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 6366630567098374382}
   - component: {fileID: 6904134474626491857}
   - component: {fileID: 6904134474626491858}
+  - component: {fileID: 8448584986361292225}
   m_Layer: 0
   m_Name: Dachia_pickup
   m_TagString: Untagged
@@ -268,9 +269,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5985565827548217940}
-  m_LocalRotation: {x: -0.8804313, y: 0.033067163, z: -0.4689274, w: -0.06208493}
-  m_LocalPosition: {x: -8.554059, y: 2.293403, z: -4.6183977}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.44602, y: 0.44602, z: 0.44602}
   m_Children:
   - {fileID: 7794453695457379211}
   - {fileID: 1226434247832485692}
@@ -278,7 +279,7 @@ Transform:
   - {fileID: 2041335627250159338}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -188.067, y: -56.080017, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &6904134474626491857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -306,6 +307,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   weapon: {fileID: 11400000, guid: a1ec315cd7084da4a9fd6e77f81f3b28, type: 2}
+--- !u!54 &8448584986361292225
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5985565827548217940}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6078744822531067233
 GameObject:
   m_ObjectHideFlags: 0

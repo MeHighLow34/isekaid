@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Legadonia Sword
   m_EditorClassIdentifier: 
   weaponName: Legadonia Sword
+  icon: {fileID: 21300000, guid: af50dc4fa7b6d314895d0f8c79adb4a5, type: 3}
   weaponDescription: Legadonnia Entente Allience
   weaponPrefab: {fileID: 2590562152124698968, guid: 31b0df1d467669b4f9d8485bec047f36, type: 3}
+  weaponPickUp: {fileID: 3074899037235205172, guid: baaa3534f8ecda742b4a99c9305751c1, type: 3}

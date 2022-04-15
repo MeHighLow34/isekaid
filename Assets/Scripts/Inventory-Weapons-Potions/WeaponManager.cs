@@ -11,6 +11,7 @@ namespace Isekai
         public Weapon currentWeapon;
         public Transform handTransform;
         WeaponInventory weaponInventory;
+        public Transform weaponSpawn;
         private void Awake()
         {
             weaponInventory = GetComponent<WeaponInventory>();

@@ -16,3 +16,4 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: f42791169da3c0149ad7d455c24026ef, type: 3}
   weaponDescription: Alliance Sword Won By Major
   weaponPrefab: {fileID: 3455046183566947075, guid: f8ffdd4581d28ca47b7de3d61c1bf1a8, type: 3}
+  weaponPickUp: {fileID: 5985565827548217940, guid: 4f84aaf07cd843f4ab496696707ad540, type: 3}

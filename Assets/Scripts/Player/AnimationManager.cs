@@ -13,7 +13,7 @@ namespace Isekai
         public void PlayTargetAnimation(string Animation, bool isInteracting)
         {
             animator.SetBool("isInteracting", isInteracting);
-            animator.CrossFade(Animation, 0.05f);
+            animator.CrossFade(Animation, 0.02f);
         }
     }
 }
