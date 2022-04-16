@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using EZCameraShake;
 
 namespace Isekai
 {
@@ -44,5 +44,10 @@ namespace Isekai
         {
             animator.SetBool("canDoCombo", false);
         }
+
+       public void Shake()
+       {
+         CameraShaker.Instance.ShakeOnce(3.5f, 3f, .1f, 1f);
+       }
     }
 }

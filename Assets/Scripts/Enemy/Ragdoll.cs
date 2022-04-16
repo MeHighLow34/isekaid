@@ -118,6 +118,16 @@ namespace Isekai
             capsuleCollider.enabled = true;
         }
 
-
+        public void DeadOffRagdoll()
+        {
+            foreach (Collider collider in ragdollColliders)
+            {
+                collider.enabled = false;
+            }
+            foreach (Rigidbody rb in ragdollBodies)
+            {
+                rb.isKinematic = true;
+            }
+        }
     }
 }

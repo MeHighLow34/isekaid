@@ -248,6 +248,23 @@ namespace Isekai
         {
             currentTarget = newTarget;
         }
+
+
+        public void FindANewTarget()
+        {
+            enemyOfMine = "Enemy";
+            Collider[] colliders = Physics.OverlapSphere(transform.position,  detectionRadius, detectionLayer);
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                BaseStats characterStats = colliders[i].transform.GetComponent<BaseStats>();
+                if (characterStats != null)
+                {
+                    if (characterStats.gameObject.tag != enemyOfMine) continue;  // Who we recognize as our enemy
+                    if (characterStats == GetComponent<BaseStats>()) continue; // ignore ourselves             
+                    currentTarget = characterStats;
+                }
+            }
+        }
         #region Gizmos
 
         private void OnDrawGizmosSelected()

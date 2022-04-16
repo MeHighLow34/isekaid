@@ -8,6 +8,7 @@ namespace Isekai
     public class Ability : MonoBehaviour
     {
         public string abilityName;
+        [TextArea]
         public string abilityDescription;
         public string abilityAnimationString;
         public Sprite icon;

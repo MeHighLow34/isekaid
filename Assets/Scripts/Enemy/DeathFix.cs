@@ -12,6 +12,7 @@ namespace Isekai
         Ragdoll ragdoll;
         public GameObject userInterface;
         public BoxCollider[] colliders;
+        public float ragdollTimer = 0f;
         private void Awake()
         {
             ragdoll = GetComponent<Ragdoll>();
@@ -29,6 +30,13 @@ namespace Isekai
                 {
                     if (collider == null) return;
                     collider.enabled = false;
+                }
+
+                ragdollTimer -= Time.deltaTime;
+                if(ragdollTimer <=0)
+                {
+                    ragdoll.DeadOffRagdoll();
+                    ragdoll.enabled = false;
                 }
             }
         }

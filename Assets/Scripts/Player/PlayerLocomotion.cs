@@ -28,17 +28,17 @@ namespace Isekai
 
         private void HandleLocomotion()
         {
-            if(playerMovement.grounded == false)
-            {
-                if(playerController.status == Status.crouching || playerController.status == Status.sliding)
-                {
-                    // When we are crouching we don't want to play jump animation obvio
-                    return;
-                }
-                animationManager.PlayTargetAnimation("Jump_Jumping", false);
-                bobbing.stopped = true;
-                return;
-            }
+            //if(playerMovement.grounded == false)
+            //{
+            //    if(playerController.status == Status.crouching || playerController.status == Status.sliding)
+            //    {
+            //        // When we are crouching we don't want to play jump animation obvio
+            //        return;
+            //    }
+            //    animationManager.PlayTargetAnimation("Jump_Jumping", false);
+            //    bobbing.stopped = true;
+            //    return;
+            //}
 
             if (playerController.status == Status.sprinting)
             {

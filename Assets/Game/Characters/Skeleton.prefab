@@ -668,7 +668,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000014575198, y: 0.22539872, z: -0.00000042736076}
+  m_ConnectedAnchor: {x: -0.0000007362105, y: 0.22539634, z: 0.000004957082}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -988,7 +988,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000039966842, y: 0.14664271, z: 0.028950434}
+  m_ConnectedAnchor: {x: -0.0000011761799, y: 0.1466433, z: 0.028955683}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -1408,7 +1408,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.10266822, y: -0.0013607466, z: -0.011182971}
+  m_ConnectedAnchor: {x: -0.10266506, y: -0.0013621026, z: -0.011188678}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -1642,7 +1642,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000002481978, y: 0.32198575, z: -0.000000722709}
+  m_ConnectedAnchor: {x: 0.0000011930259, y: 0.32198557, z: -0.0000038445137}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -1782,7 +1782,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000014947726, y: 0.2253983, z: 0.0000005596084}
+  m_ConnectedAnchor: {x: 0.00000072689716, y: 0.2253991, z: 0.000002345885}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1892,7 +1892,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000013783584, y: 0.32198557, z: -0.00000045448613}
+  m_ConnectedAnchor: {x: -0.0000002570452, y: 0.32198521, z: -0.0000020712646}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2250,7 +2250,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.17920467, y: 0.27435064, z: 0.08404512}
+  m_ConnectedAnchor: {x: -0.17920509, y: 0.27435172, z: 0.08404519}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2769,7 +2769,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.17920507, y: 0.2743509, z: 0.084044866}
+  m_ConnectedAnchor: {x: 0.17920692, y: 0.27435285, z: 0.0840399}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2878,7 +2878,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000002381905, y: 0.42838323, z: 0.13764295}
+  m_ConnectedAnchor: {x: -0.00000043236145, y: 0.42838323, z: 0.13764751}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3019,7 +3019,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.102668315, y: -0.0013604579, z: -0.0111834705}
+  m_ConnectedAnchor: {x: 0.102666534, y: -0.0013637175, z: -0.01118353}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -3535,7 +3535,7 @@ MonoBehaviour:
   strafeLeft: 0
   strafeRight: 0
   hasHitReaction: 1
-  Ally: 1
+  Ally: 0
   resetState: {fileID: 192610246}
   rayCastPosition: {fileID: 935871137}
 --- !u!114 &982511906
@@ -3616,6 +3616,7 @@ MonoBehaviour:
   userInterface: {fileID: 528538343436135448}
   colliders:
   - {fileID: 1050174853}
+  ragdollTimer: 0.5
 --- !u!1 &6653533197924449948
 GameObject:
   m_ObjectHideFlags: 0

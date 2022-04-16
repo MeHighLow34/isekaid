@@ -68,10 +68,17 @@ namespace Isekai
                 {
                     if (characterStats.gameObject.tag != enemyManager.enemyOfMine) continue;  // We only recognize player as  a valid enemy at this point in development...
                     if (characterStats == ignoreOurselves) continue; // ignore ourselves
-                   
-                    Vector3 targetDirection = characterStats.transform.position - transform.position;
-                    float viewAbleAngle = Vector3.Angle(targetDirection, transform.forward);
-                    if (viewAbleAngle > minimumViewAbleAngle && viewAbleAngle < maximumViewAbleAngle)
+
+                    if (enemyManager.Ally == false)
+                    {
+                        Vector3 targetDirection = characterStats.transform.position - transform.position;
+                        float viewAbleAngle = Vector3.Angle(targetDirection, transform.forward);
+                        if (viewAbleAngle > minimumViewAbleAngle && viewAbleAngle < maximumViewAbleAngle)
+                        {
+                            enemyManager.currentTarget = characterStats;
+                        }
+                    }
+                    else
                     {
                         enemyManager.currentTarget = characterStats;
                     }

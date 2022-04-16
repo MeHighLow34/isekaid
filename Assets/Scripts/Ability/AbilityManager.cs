@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using EZCameraShake;
 
 namespace Isekai 
 {
@@ -11,9 +12,9 @@ namespace Isekai
         public Ability currentAbility;
         public Image icon;
         [Header("Pre-Alpha Abilities")]
-        public Ability shield;
         public Ability telekenesis;
         public Ability singularity;
+        public Ability hypnotize;
         private void Start()
         {
             Setup(testingAbility);
@@ -31,11 +32,6 @@ namespace Isekai
 
         private void Update()
         {
-            //if(Input.GetKeyDown(KeyCode.Z))
-            //{
-            //    Setup(shield);
-            //}
-
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 Setup(telekenesis);
@@ -44,6 +40,11 @@ namespace Isekai
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 Setup(singularity);
+            }
+
+            if(Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                Setup(hypnotize);
             }
         }
     }
