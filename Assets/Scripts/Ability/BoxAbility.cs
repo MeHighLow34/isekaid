@@ -17,15 +17,8 @@ namespace Isekai
         {
             fpsCam = Camera.main;   
         }
-        private void Start()
-        {
-            beingUsed = false;
-            time = timeLimit;
-            canUse = true;
-        }
         public override void UseAbility()
         {
-            if (canUse == false) return;   // We can't use because timer is still on
             Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit))
@@ -37,8 +30,6 @@ namespace Isekai
                     Vector3 spawnPosition = playerTransform.position;
                     spawnPosition.y = spawnPosition.y + yPosition;
                     Instantiate(boxPrefab, spawnPosition + playerTransform.forward * zPosition, Quaternion.identity);
-                    canUse = false;
-                    time = timeLimit;  // Here we used the ability so we start a timer
                 }
                 else
                 {
@@ -52,25 +43,5 @@ namespace Isekai
                 Instantiate(boxPrefab, spawnPosition + playerTransform.forward * zPosition, Quaternion.identity);
             }
         }
-
-        private void Timer()
-        {
-            time -= Time.deltaTime;   // Just counts down with time and once it reaches zero we canUse ability again...
-            if(time <= 0)
-            {
-                canUse = true;
-                time = 0;
-            }
-        }
-
-        private void Update()
-        {
-            if(canUse == false)  // Once we have used the ability we start a timer
-            {
-                Timer();
-            }
-        }
     }
-
-    
 }

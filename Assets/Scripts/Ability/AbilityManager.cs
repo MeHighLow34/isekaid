@@ -15,6 +15,10 @@ namespace Isekai
         public Ability telekenesis;
         public Ability singularity;
         public Ability hypnotize;
+        [Header("Timer Props")]
+        public float time;
+        public bool abilitiesDisabled;
+        float timeMax;
         private void Start()
         {
             Setup(testingAbility);
@@ -32,6 +36,7 @@ namespace Isekai
 
         private void Update()
         {
+            Timer();
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 Setup(telekenesis);
@@ -46,6 +51,30 @@ namespace Isekai
             {
                 Setup(hypnotize);
             }
+        }
+
+        public void StartTimer(float timeValue)
+        {
+            timeMax = timeValue;
+            time = timeValue;
+            abilitiesDisabled = true;
+        }
+
+        private void Timer()
+        {
+            if(abilitiesDisabled)
+            {
+                time -= Time.deltaTime;
+                if(time <= 0 )
+                {
+                    abilitiesDisabled = false;
+                }
+            }
+        }
+
+        public float GetDecimals()
+        {
+            return time / timeMax;
         }
     }
 }

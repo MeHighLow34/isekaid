@@ -8,13 +8,18 @@ namespace Isekai
     public class Hypnotize : Ability
     {
         Camera fpsCam;
-
+        AbilityManager abilityManager;
         private void Awake()
         {
+            abilityManager = FindObjectOfType<AbilityManager>();
             fpsCam = Camera.main;   
         }
         public override void UseAbility()
         {
+            if(abilityManager.abilitiesDisabled == true)
+            {
+                return;
+            }
             Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit))

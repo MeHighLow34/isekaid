@@ -29,6 +29,7 @@ Transform:
   m_Children:
   - {fileID: 392173825}
   - {fileID: 489933040}
+  - {fileID: 806511869}
   m_Father: {fileID: 7085721664118310500}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -79,9 +80,6 @@ MonoBehaviour:
   abilityDescription: Throwing Objects
   abilityAnimationString: not_yet
   icon: {fileID: 21300000, guid: 9004d92e57c30fa43b39efa1cc6127f8, type: 3}
-  timeLimit: 0.5
-  canUse: 0
-  time: 0
   beingUsed: 0
   animationManager: {fileID: 0}
   abilityIntermediary: {fileID: 0}
@@ -137,14 +135,12 @@ MonoBehaviour:
   abilityDescription: Spawn a fucking black hole
   abilityAnimationString: not_yet
   icon: {fileID: 21300000, guid: 48d465b94e788b0479557169763b8bd4, type: 3}
-  timeLimit: 3
-  canUse: 0
-  time: 0
   beingUsed: 0
   animationManager: {fileID: 0}
   abilityIntermediary: {fileID: 0}
   blackHole: {fileID: 6312513386719707267, guid: 11c6c204a17722c42b92ce02c17bdd65, type: 3}
   fpsCam: {fileID: 0}
+  cooldownTimer: 15
 --- !u!1 &689126093
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,6 +187,56 @@ MonoBehaviour:
   identifier: 
   localAxis: {x: 0, y: 1, z: 0}
   angleChanges: 0
+--- !u!1 &806511868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 806511869}
+  - component: {fileID: 806511870}
+  m_Layer: 19
+  m_Name: Hypnotize
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &806511869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806511868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 124621440}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &806511870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806511868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c104b35384d0c44b8180f3fd4ef2fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityName: Hypnotize
+  abilityDescription: Make an enemy your ally in combat.
+  abilityAnimationString: 
+  icon: {fileID: 21300000, guid: ae7e1099aaff73c4b8e6e623e8c96910, type: 3}
+  beingUsed: 0
+  animationManager: {fileID: 0}
+  abilityIntermediary: {fileID: 0}
 --- !u!1 &1129051293
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,6 +584,7 @@ GameObject:
   - component: {fileID: 7085721663646366575}
   - component: {fileID: 963194229}
   - component: {fileID: 752932763}
+  - component: {fileID: 573420512}
   m_Layer: 19
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -745,6 +792,22 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
+--- !u!114 &573420512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7085721663646366572}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab8353b5ebd32545867da143199a814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
+  DefaultRotInfluence: {x: 1, y: 1, z: 1}
+  RestPositionOffset: {x: 0, y: 0.75, z: 0}
+  RestRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &7085721664118310506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,9 +1149,11 @@ MonoBehaviour:
   testingAbility: {fileID: 489933041}
   currentAbility: {fileID: 0}
   icon: {fileID: 0}
-  shield: {fileID: 0}
   telekenesis: {fileID: 392173826}
   singularity: {fileID: 489933041}
+  hypnotize: {fileID: 806511870}
+  time: 0
+  abilitiesDisabled: 0
 --- !u!114 &919950875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,9 +1248,11 @@ MonoBehaviour:
   testingAbility: {fileID: 489933041}
   currentAbility: {fileID: 0}
   icon: {fileID: 0}
-  shield: {fileID: 0}
   telekenesis: {fileID: 392173826}
   singularity: {fileID: 489933041}
+  hypnotize: {fileID: 0}
+  time: 0
+  abilitiesDisabled: 0
 --- !u!114 &4501964637452135004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1325,7 +1392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc2eb9c4c13a2545bb8cff8790f58a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testWeapon: {fileID: 11400000, guid: 4dd603b36384a684eae0a38d68482c81, type: 2}
+  testWeapon: {fileID: 11400000, guid: a1ec315cd7084da4a9fd6e77f81f3b28, type: 2}
   currentWeapon: {fileID: 0}
   handTransform: {fileID: 4582337999951510841}
   weaponSpawn: {fileID: 2038827096}
@@ -1756,24 +1823,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
---- !u!95 &5866666020596554737 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
-  m_PrefabInstance: {fileID: 1447274080}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &543450652261400971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
   m_PrefabInstance: {fileID: 1447274080}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &919132148320869169 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
-  m_PrefabInstance: {fileID: 1447274080}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2229452826923520812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2229452827825534284, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
+  m_PrefabInstance: {fileID: 1447274080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5866666020596554737 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
+  m_PrefabInstance: {fileID: 1447274080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &919132148320869169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b3f44f22a7dcc84285db3ffd9ec02d4, type: 3}
   m_PrefabInstance: {fileID: 1447274080}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &12827842

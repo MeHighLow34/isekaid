@@ -15,25 +15,23 @@ namespace Isekai
         public Transform cameraTransform;
        // public bool beingUsed;
         public float shootPower;
+        AbilityManager abilityManager;
         private void Awake()
         {
+            abilityManager = FindObjectOfType<AbilityManager>();
             abilityIntermediary = FindObjectOfType<AbilityIntermediary>();
             animationManager = FindObjectOfType<AnimationManager>();
         }
-        private void Start()
-        {
-            beingUsed = false;
-            time = timeLimit;
-        }
+
         public override void UseAbility()
         {
             beingUsed = !beingUsed;  // Here we are turning ability on and off
         }
         private void FixedUpdate()
         {
-            if(canUse == false)    // We can't use because timer is still on
+            if(abilityManager.abilitiesDisabled == true)
             {
-                Timer();    // Once we have used the ability we start a timer
+                beingUsed = false;
                 return;
             }
             if (beingUsed)  
@@ -52,7 +50,6 @@ namespace Isekai
                             print("Cannot Throw that Object");         
                             return;
                         }
-
                     }
                     else
                     {
@@ -71,8 +68,6 @@ namespace Isekai
                 {
                     print("Throwing Object");
                     ThrowObject();
-                    canUse = false;      // Here we used the ability so we start a timer
-                    time = timeLimit;   // we are using timeLimit to set the max value...
                 }
                 else
                 {
@@ -113,6 +108,7 @@ namespace Isekai
             heldObj = null;
             beingUsed = false;
             animationManager.animator.SetBool("Throw", true);
+            abilityManager.StartTimer(10f);
         }
         void HoldObject(GameObject holdObject)
         {
@@ -129,16 +125,5 @@ namespace Isekai
 
             }
         }
-
-        private void Timer()
-        {
-            time -= Time.deltaTime;   // Just counts down with time and once it reaches zero we canUse ability again...
-            if (time <= 0)
-            {
-                canUse = true;
-                time = 0;
-            }
-        }
-
     }
 }
