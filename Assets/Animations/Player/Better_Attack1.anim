@@ -1158,13 +1158,6 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.45
-    functionName: Shake
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 0.5833333
     functionName: EnableCombo
     data: 
@@ -1179,7 +1172,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1
+  - time: 1.0666667
     functionName: DisableCombo
     data: 
     objectReferenceParameter: {fileID: 0}

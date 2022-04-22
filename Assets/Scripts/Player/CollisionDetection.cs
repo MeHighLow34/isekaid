@@ -7,6 +7,7 @@ namespace Isekai
 {
     public class CollisionDetection : MonoBehaviour
     {
+        BoxCollider boxCollider;
         public GameObject player;
         public float force;
         public float damage;
@@ -16,7 +17,13 @@ namespace Isekai
         public GameObject bloodVFX;
         private void Awake()
         {
+            boxCollider = GetComponent<BoxCollider>();
             player = GameObject.FindGameObjectWithTag("Player");
+        }
+
+        private void Start()
+        {
+            boxCollider.enabled = false;
         }
         private void OnTriggerEnter(Collider other)
         {

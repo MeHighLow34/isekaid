@@ -12,9 +12,11 @@ namespace Isekai
         public Transform handTransform;
         WeaponInventory weaponInventory;
         public Transform weaponSpawn;
+        AnimationEvents weaponAnimationEvents;
         private void Awake()
         {
             weaponInventory = GetComponent<WeaponInventory>();
+            weaponAnimationEvents = FindObjectOfType<AnimationEvents>();
         }
         private void Start()
         {
@@ -29,6 +31,8 @@ namespace Isekai
             currentWeapon = newWeapon;
             Instantiate(currentWeapon.weaponPrefab, handTransform);
             weaponInventory.Remove(currentWeapon);
+            print("Calling the get weapon");
+            weaponAnimationEvents.GetWeapon();
         }
 
         public void UnequipWeapon()

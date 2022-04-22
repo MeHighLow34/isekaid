@@ -11,20 +11,21 @@ namespace Isekai
         public BoxCollider weaponBoxCollider;
         public Animator animator;
         public Transform weaponHolder;
-
-
        
         private void Awake()
         {
             animator = GetComponent<Animator>();
         }
 
-        private void Start()
+        public void GetWeapon()
         {
             weaponBoxCollider = weaponHolder.GetChild(0).GetComponent<BoxCollider>();
-            weaponBoxCollider.enabled = false;
         }
 
+        private void Update()
+        {
+          GetWeapon();
+        }
         public void EnableCollider()
         {
             weaponBoxCollider.enabled = true;
@@ -47,7 +48,7 @@ namespace Isekai
 
        public void Shake()
        {
-         CameraShaker.Instance.ShakeOnce(3.5f, 3f, .1f, 1f);
+          CameraShaker.Instance.ShakeOnce(3.5f, 3f, .1f, 1f);
        }
     }
 }
