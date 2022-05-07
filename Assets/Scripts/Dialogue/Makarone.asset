@@ -1,0 +1,339 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8569523054005997560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd770cbd21281d4282d1a917a657ffc, type: 3}
+  m_Name: 432699cb-7545-45e6-a7ba-ed96ec6620cb
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Just saying tho you kind suck ass
+  children:
+  - a839bfda-280c-4063-8dda-99519876d6de
+  rect:
+    serializedVersion: 2
+    x: 961
+    y: 616
+    width: 200
+    height: 100
+--- !u!114 &-7988669612578001270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd770cbd21281d4282d1a917a657ffc, type: 3}
+  m_Name: 40148dde-541b-4f1c-96a8-9a6b359bd535
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Stay with me
+  children:
+  - 6e299f40-fd28-463a-8fe9-359436c01ab6
+  rect:
+    serializedVersion: 2
+    x: 395
+    y: 446
+    width: 200
+    height: 100
+--- !u!114 &-7641904775388341833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd770cbd21281d4282d1a917a657ffc, type: 3}
+  m_Name: 6e299f40-fd28-463a-8fe9-359436c01ab6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: HEHEHEHEHEHEHE
+  children:
+  - 99fa3f77-1fd2-418a-89b8-35467b7ed3e8
+  rect:
+    serializedVersion: 2
+    x: 616
+    y: 570
+    width: 200
+    height: 100
+--- !u!114 &-7408650006654797408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd770cbd21281d4282d1a917a657ffc, type: 3}
+  m_Name: a839bfda-280c-4063-8dda-99519876d6de
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: So that's how it's going to be
+  children:
+  - ea74e086-336d-45ab-b065-7f37d41f8de7
+  rect:
+    serializedVersion: 2
+    x: 1109
+    y: 254
+    width: 200
+    height: 100
+--- !u!114 &-6648096227270838532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd770cbd21281d4282d1a917a657ffc, type: 3}
+  m_Name: 8173578f-65e4-416c-abdc-af39c91acc9d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: My favorite is with cheese
+  children:
+  - 0befe0cc-1312-4940-843d-6e5916ff6fc3
+  rect:
+    serializedVersion: 2
+    x: 101
+    y: 383
+    width: 200
+    height: 100
+--- !u!114 &-5410232494277291714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd770cbd21281d4282d1a917a657ffc, type: 3}
+  m_Name: 0a30a185-6756-4300-9698-43c47f227967
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Excuse me wtf?
+  children:
+  - 0befe0cc-1312-4940-843d-6e5916ff6fc3
+  rect:
+    serializedVersion: 2
+    x: 324
+    y: 96
+    width: 200
+    height: 100
+--- !u!114 &-5197904511584573278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd770cbd21281d4282d1a917a657ffc, type: 3}
+  m_Name: 45ea92ca-ba9f-490b-840b-faaa83156e72
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: DUDE WHYYY WHYY
+  children:
+  - cdf39c3a-cb4b-43b8-92dc-a5cf33752c9e
+  rect:
+    serializedVersion: 2
+    x: 546
+    y: 298
+    width: 200
+    height: 100
+--- !u!114 &-2317055193250064003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd770cbd21281d4282d1a917a657ffc, type: 3}
+  m_Name: 8fd77125-d8b4-48ad-89c3-903eb801f11f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: AHAHAHAHAHAH
+  children:
+  - 0a30a185-6756-4300-9698-43c47f227967
+  - 8173578f-65e4-416c-abdc-af39c91acc9d
+  rect:
+    serializedVersion: 2
+    x: 138
+    y: 206
+    width: 200
+    height: 100
+--- !u!114 &-2052208190684197387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd770cbd21281d4282d1a917a657ffc, type: 3}
+  m_Name: 524b931d-cb53-4de6-b0f1-0e0bae6aeab1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Da li ti volis MAKARONE?!?!?!?!?!?!
+  children:
+  - 8fd77125-d8b4-48ad-89c3-903eb801f11f
+  rect:
+    serializedVersion: 2
+    x: 37
+    y: 90
+    width: 200
+    height: 100
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62067edcc6dc1e469c4457eaa48e48b, type: 3}
+  m_Name: Makarone
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2052208190684197387}
+  - {fileID: -2317055193250064003}
+  - {fileID: -5410232494277291714}
+  - {fileID: -6648096227270838532}
+  - {fileID: 4698183555329075552}
+  - {fileID: -5197904511584573278}
+  - {fileID: -7988669612578001270}
+  - {fileID: 3517192887896763220}
+  - {fileID: 5685541127205373915}
+  - {fileID: -7641904775388341833}
+  - {fileID: 8171270348382253231}
+  - {fileID: -8569523054005997560}
+  - {fileID: -7408650006654797408}
+  - {fileID: 653693737366419658}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &653693737366419658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd770cbd21281d4282d1a917a657ffc, type: 3}
+  m_Name: ea74e086-336d-45ab-b065-7f37d41f8de7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Yes you bitch ass bitch
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1006
+    y: 362
+    width: 200
+    height: 100
+--- !u!114 &3517192887896763220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd770cbd21281d4282d1a917a657ffc, type: 3}
+  m_Name: 016c17f0-1ff5-4917-9a7c-e73cd9996ff7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Sore Loooser Looser
+  children:
+  - cdf39c3a-cb4b-43b8-92dc-a5cf33752c9e
+  rect:
+    serializedVersion: 2
+    x: 560
+    y: 148
+    width: 200
+    height: 100
+--- !u!114 &4698183555329075552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd770cbd21281d4282d1a917a657ffc, type: 3}
+  m_Name: 0befe0cc-1312-4940-843d-6e5916ff6fc3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: That's funny...now goodbye
+  children:
+  - 45ea92ca-ba9f-490b-840b-faaa83156e72
+  - 40148dde-541b-4f1c-96a8-9a6b359bd535
+  - 016c17f0-1ff5-4917-9a7c-e73cd9996ff7
+  rect:
+    serializedVersion: 2
+    x: 296
+    y: 298
+    width: 200
+    height: 100
+--- !u!114 &5685541127205373915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd770cbd21281d4282d1a917a657ffc, type: 3}
+  m_Name: cdf39c3a-cb4b-43b8-92dc-a5cf33752c9e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Sorry Gonna Have To Hike
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 746
+    y: 298
+    width: 200
+    height: 100
+--- !u!114 &8171270348382253231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd770cbd21281d4282d1a917a657ffc, type: 3}
+  m_Name: 99fa3f77-1fd2-418a-89b8-35467b7ed3e8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Why you laughing you player?
+  children:
+  - 432699cb-7545-45e6-a7ba-ed96ec6620cb
+  rect:
+    serializedVersion: 2
+    x: 866
+    y: 570
+    width: 200
+    height: 100

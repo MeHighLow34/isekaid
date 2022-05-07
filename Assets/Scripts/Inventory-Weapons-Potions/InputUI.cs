@@ -12,31 +12,42 @@ namespace Isekai
         public bool inventoryEnabled;
         public CameraMovement cameraMovement;
         public GameObject blur;
+        public bool dialogueEnabled;
         private void Update()
         {
             if(Input.GetKeyDown(KeyCode.Tab))
             {
                 inventoryEnabled = !inventoryEnabled;
             }
-
-            if(inventoryEnabled)
+            if (inventoryEnabled)
             {
                 HUD.alpha = 0f;
                 inventoryCanvas.alpha = 1f;
-                cameraMovement.enableCursor = true;
-                cameraMovement.lockCursor = false;
+                EnableCursor();
                 blur.SetActive(true);
+                inventoryCanvas.interactable = true;
+                inventoryCanvas.blocksRaycasts = true;
             }
             else
             {
                 HUD.alpha = 1f;
                 inventoryCanvas.alpha = 0f;
-                cameraMovement.enableCursor= false;
-                cameraMovement.lockCursor = true;
+                if(!dialogueEnabled)DisableCursor();
                 blur.SetActive(false);
+                inventoryCanvas.interactable = false;
+                inventoryCanvas.blocksRaycasts = false; 
             }
+        }
 
-           
+        public void EnableCursor()
+        {
+            cameraMovement.enableCursor = true;
+            cameraMovement.lockCursor = false;
+        }
+        public void DisableCursor()
+        {
+            cameraMovement.enableCursor = false;
+            cameraMovement.lockCursor = true;
         }
 
     }

@@ -8,13 +8,9 @@ namespace Isekai
     {
         public Texture2D crosshair;
 
-        private void Start()
+        private void LateUpdate()
         {
-
-            void OnMouseEnter()
-            {
-                Cursor.SetCursor(crosshair, Vector2.zero, CursorMode.Auto);
-            }
+          Cursor.SetCursor(crosshair, Vector2.zero, CursorMode.Auto);  
         }
     }
 }
