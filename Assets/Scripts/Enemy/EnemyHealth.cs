@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using MoreMountains.Feedbacks;
 namespace Isekai
 {
     public class EnemyHealth : MonoBehaviour
@@ -25,6 +25,9 @@ namespace Isekai
      //   public GameObject heartExplosionParticle;
         public GameObject hearth;
         bool gaveExperience;
+        [Header("Feel Effects")]
+        [SerializeField] MMFeedbacks hitFeedback;
+        [SerializeField] MMFeedbacks deathFeedback;
         private void Awake()
         {
             experience = FindObjectOfType<Experience>();
@@ -57,11 +60,16 @@ namespace Isekai
             {
                 ShowFloatingText(damage);
             }
+            if(hitFeedback != null)
+            {
+                hitFeedback.PlayFeedbacks();
+            }
             health -= damage;
             if (health <= 0)
             {
           //      print("Im dead" + gameObject.name);
                 manager.isDead = true;
+                deathFeedback.PlayFeedbacks();
                 HandleDeath();
             }
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using TMPro;
 namespace Isekai
 {
     public class PlayerConversant : MonoBehaviour
@@ -13,6 +14,7 @@ namespace Isekai
         InputUI inputUI;
         public GameObject dialoguePostProcess;
         PlayerMovement playerMovement;
+        [SerializeField] TextMeshProUGUI npcText;
 
         public event Action onConversationUpdated;
         private void Awake()
@@ -30,6 +32,7 @@ namespace Isekai
             DialogueEffects();
         }
 
+
         private void DialogueEffects()
         {
             inputUI.dialogueEnabled = true;
@@ -39,6 +42,10 @@ namespace Isekai
             playerMovement.runSpeed = 0.05f;
         }
 
+        public void SetNPCName(string name)
+        {
+            npcText.text = name;
+        }
         private void DeOffEffects()
         {
             inputUI.dialogueEnabled = false;

@@ -6,6 +6,7 @@ namespace Isekai
 {
     public class AIConversant : MonoBehaviour
     {
+        [SerializeField] string npcName;
         [SerializeField] Dialogue dialogue;
         [SerializeField] float range = 5f;
         PlayerConversant player;
@@ -20,6 +21,7 @@ namespace Isekai
            if (distance < range && Input.GetKeyDown(KeyCode.J))
            {
                 player.StartDialogue(dialogue);
+                player.SetNPCName(npcName);
            }
         }
     }

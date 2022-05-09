@@ -39,6 +39,7 @@ namespace Isekai
             playerConversant.Next();
         }
 
+        
         void UpdateUI()
         {
             gameObject.SetActive(playerConversant.IsActive());
