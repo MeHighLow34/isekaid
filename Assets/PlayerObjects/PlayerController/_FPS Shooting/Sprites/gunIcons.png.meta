@@ -56,6 +56,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -64,12 +66,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -87,9 +89,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -135,7 +140,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 3fbabca1256f7c280800000000000000
-      internalID: -9022972495916192781
+      internalID: 8336229300168022472
       vertices: []
       indices: 
       edges: []
@@ -156,7 +161,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 88ce4fc761733da00800000000000000
-      internalID: 780027730190462088
+      internalID: 2258435179232560843
       vertices: []
       indices: 
       edges: []
@@ -318,6 +323,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      gunIcons_0: 8336229300168022472
+      gunIcons_2: -5618376386454089674
+      gunIcons_6: -939451293159956809
+      gunIcons_5: 5282243598889293882
+      gunIcons_8: -2546414084548640331
+      gunIcons_3: -162449295569289511
+      gunIcons_1: 2258435179232560843
+      gunIcons_4: 284728977010562124
+      gunIcons_7: -746763193842082230
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

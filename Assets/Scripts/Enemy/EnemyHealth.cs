@@ -28,6 +28,7 @@ namespace Isekai
         [Header("Feel Effects")]
         [SerializeField] MMFeedbacks hitFeedback;
         [SerializeField] MMFeedbacks deathFeedback;
+        [SerializeField] Flash flashEffect;
         private void Awake()
         {
             experience = FindObjectOfType<Experience>();
@@ -63,6 +64,10 @@ namespace Isekai
             if(hitFeedback != null)
             {
                 hitFeedback.PlayFeedbacks();
+            }
+            if(flashEffect != null)
+            {
+                flashEffect.started = true;
             }
             health -= damage;
             if (health <= 0)
